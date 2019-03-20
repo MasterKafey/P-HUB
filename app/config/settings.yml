@@ -1,0 +1,4 @@
+parameters:
+    mailer_params:
+        sender_address: contact@phub.com
+        sender_name: 'PHUB'

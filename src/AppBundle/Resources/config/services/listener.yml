@@ -1,0 +1,5 @@
+services:
+    AppBundle\Service\Listener\UserListener:
+        tags:
+        - { name: doctrine.orm.entity_listener, entity: AppBundle\Entity\User, event: prePersist }
+        - { name: doctrine.orm.entity_listener, entity: AppBundle\Entity\User, event: preUpdate }

@@ -1,0 +1,7 @@
+app_home:
+    prefix: /
+    resource: "home/all.yml"
+
+app_user:
+    prefix: /user/
+    resource: "user/all.yml"

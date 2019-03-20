@@ -1,0 +1,11 @@
+{% extends '@Layout/Page/Default/base.html.twig' %}
+
+{% block body %}
+    {{ form_start(form) }}
+        {{ form_rest(form) }}
+        <button>Connection</button>
+    {{ form_end(form) }}
+    <a href="{{ path('app_user_registration_register') }}">
+        Enregistrement
+    </a>
+{% endblock body %}
