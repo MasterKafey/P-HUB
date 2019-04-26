@@ -1,0 +1,5 @@
+app_admin_item_deletion_delete_item:
+    path: /delete_item/{id}
+    defaults: { _controller: 'AppBundle:Admin/Item/Deletion:deleteItem' }
+    requirements:
+        id: \d+

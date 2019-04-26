@@ -2,6 +2,18 @@ app_admin_god:
     prefix: /god/
     resource: "god/all.yml"
 
+app_admin_implant:
+    prefix: /implant/
+    resource: "implant/all.yml"
+
+app_admin_weapon:
+    prefix: /weapon/
+    resource: "weapon/all.yml"
+
+app_admin_item:
+    prefix: /item/
+    resource: "item/all.yml"
+
 app_admin_status:
     prefix: /status/
     resource: "status/all.yml"

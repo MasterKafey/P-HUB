@@ -1,0 +1,20 @@
+app_admin_implant_creation:
+    prefix: /creation/
+    resource: "creation.yml"
+
+app_admin_implant_deletion:
+    prefix: /deletion/
+    resource: "deletion.yml"
+
+app_admin_implant_edition:
+    prefix: /edition/
+    resource: "edition.yml"
+
+app_admin_implant_listing:
+    prefix: /listing/
+    resource: "listing.yml"
+
+app_admin_implant_showing:
+    prefix: /showing/
+    resource: "showing.yml"
+

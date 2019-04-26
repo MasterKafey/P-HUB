@@ -1,0 +1,5 @@
+app_admin_weapon_edition_edit_weapon:
+    path: /edit_weapon/{id}
+    defaults: { _controller: 'AppBundle:Admin/Weapon/Edition:editWeapon' }
+    requirements:
+        id: \d+

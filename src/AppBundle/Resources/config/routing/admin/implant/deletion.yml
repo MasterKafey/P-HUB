@@ -1,0 +1,5 @@
+app_admin_implant_deletion_delete_implant:
+    path: /delete_implant/{id}
+    defaults: { _controller: 'AppBundle:Admin/Implant/Deletion:deleteImplant' }
+    requirements:
+        id: \d+
