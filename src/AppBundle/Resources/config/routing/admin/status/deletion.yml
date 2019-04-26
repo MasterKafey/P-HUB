@@ -1,0 +1,5 @@
+app_admin_status_deletion_delete_status:
+    path: /delete_status/{id}
+    defaults: { _controller: 'AppBundle:Admin/Status/Deletion:deleteStatus' }
+    requirements:
+        id: \d+

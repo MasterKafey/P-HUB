@@ -1,0 +1,5 @@
+app_admin_origin_showing_show_origin:
+    path: /show_origin/{id}
+    defaults: { _controller: 'AppBundle:Admin/Origin/Showing:showOrigin' }
+    requirements:
+        id: \d+

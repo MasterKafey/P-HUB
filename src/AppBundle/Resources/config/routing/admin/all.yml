@@ -2,3 +2,23 @@ app_admin_god:
     prefix: /god/
     resource: "god/all.yml"
 
+app_admin_status:
+    prefix: /status/
+    resource: "status/all.yml"
+
+app_admin_origin:
+    prefix: /origin/
+    resource: "origin/all.yml"
+
+app_admin_posture:
+    prefix: /posture/
+    resource: "posture/all.yml"
+
+app_admin_rank:
+    prefix: /rank/
+    resource: "rank/all.yml"
+
+app_admin_wound:
+    prefix: /wound/
+    resource: "wound/all.yml"
+

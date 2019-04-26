@@ -1,0 +1,19 @@
+AppBundle\Entity\Wound:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\WoundRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+            unique: true
+        description:
+            type: string
+            length: 255
+    lifecycleCallbacks: {  }

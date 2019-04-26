@@ -1,0 +1,5 @@
+app_admin_rank_edition_edit_rank:
+    path: /edit_rank/{id}
+    defaults: { _controller: 'AppBundle:Admin/Rank/Edition:editRank' }
+    requirements:
+        id: \d+

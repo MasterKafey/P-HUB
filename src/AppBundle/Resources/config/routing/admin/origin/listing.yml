@@ -1,0 +1,3 @@
+app_admin_origin_listing_list_origin:
+    path: /list_origin/
+    defaults: { _controller: 'AppBundle:Admin/Origin/Listing:listOrigin' }

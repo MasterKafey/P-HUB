@@ -1,0 +1,5 @@
+app_admin_wound_deletion_delete_wound:
+    path: /delete_wound/{id}
+    defaults: { _controller: 'AppBundle:Admin/Wound/Deletion:deleteWound' }
+    requirements:
+        id: \d+

@@ -1,0 +1,5 @@
+app_admin_origin_deletion_delete_origin:
+    path: /delete_origin/{id}
+    defaults: { _controller: 'AppBundle:Admin/Origin/Deletion:deleteOrigin' }
+    requirements:
+        id: \d+

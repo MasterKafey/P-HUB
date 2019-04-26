@@ -1,0 +1,3 @@
+app_admin_posture_creation_create_posture:
+    path: /create_posture/
+    defaults: { _controller: 'AppBundle:Admin/Posture/Creation:createPosture' }

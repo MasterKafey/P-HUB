@@ -1,0 +1,5 @@
+app_admin_posture_edition_edit_posture:
+    path: /edit_posture/{id}
+    defaults: { _controller: 'AppBundle:Admin/Posture/Edition:editPosture' }
+    requirements:
+        id: \d+

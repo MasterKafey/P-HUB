@@ -1,0 +1,3 @@
+app_admin_status_creation_create_status:
+    path: /create_status/
+    defaults: { _controller: 'AppBundle:Admin/Status/Creation:createStatus' }

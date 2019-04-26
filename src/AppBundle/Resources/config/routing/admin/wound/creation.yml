@@ -1,0 +1,3 @@
+app_admin_wound_creation_create_wound:
+    path: /create_wound/
+    defaults: { _controller: 'AppBundle:Admin/Wound/Creation:createWound' }

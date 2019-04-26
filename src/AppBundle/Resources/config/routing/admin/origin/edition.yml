@@ -1,0 +1,5 @@
+app_admin_origin_edition_edit_origin:
+    path: /edit_origin/{id}
+    defaults: { _controller: 'AppBundle:Admin/Origin/Edition:editOrigin' }
+    requirements:
+        id: \d+

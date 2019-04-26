@@ -1,0 +1,5 @@
+app_admin_wound_showing_show_wound:
+    path: /show_wound/{id}
+    defaults: { _controller: 'AppBundle:Admin/Wound/Showing:showWound' }
+    requirements:
+        id: \d+

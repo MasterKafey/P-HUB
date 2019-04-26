@@ -1,0 +1,20 @@
+app_admin_status_creation:
+    prefix: /creation/
+    resource: "creation.yml"
+
+app_admin_status_deletion:
+    prefix: /deletion/
+    resource: "deletion.yml"
+
+app_admin_status_edition:
+    prefix: /edition/
+    resource: "edition.yml"
+
+app_admin_status_listing:
+    prefix: /listing/
+    resource: "listing.yml"
+
+app_admin_status_showing:
+    prefix: /showing/
+    resource: "showing.yml"
+

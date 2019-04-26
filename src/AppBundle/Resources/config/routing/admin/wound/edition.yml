@@ -1,0 +1,5 @@
+app_admin_wound_edition_edit_wound:
+    path: /edit_wound/{id}
+    defaults: { _controller: 'AppBundle:Admin/Wound/Edition:editWound' }
+    requirements:
+        id: \d+

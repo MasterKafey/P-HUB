@@ -1,0 +1,20 @@
+app_admin_origin_creation:
+    prefix: /creation/
+    resource: "creation.yml"
+
+app_admin_origin_deletion:
+    prefix: /deletion/
+    resource: "deletion.yml"
+
+app_admin_origin_edition:
+    prefix: /edition/
+    resource: "edition.yml"
+
+app_admin_origin_listing:
+    prefix: /listing/
+    resource: "listing.yml"
+
+app_admin_origin_showing:
+    prefix: /showing/
+    resource: "showing.yml"
+

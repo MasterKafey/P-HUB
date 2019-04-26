@@ -1,0 +1,5 @@
+app_admin_posture_showing_show_posture:
+    path: /show_posture/{id}
+    defaults: { _controller: 'AppBundle:Admin/Posture/Showing:showPosture' }
+    requirements:
+        id: \d+

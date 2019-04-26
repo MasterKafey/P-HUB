@@ -1,0 +1,3 @@
+app_admin_rank_creation_create_rank:
+    path: /create_rank/
+    defaults: { _controller: 'AppBundle:Admin/Rank/Creation:createRank' }

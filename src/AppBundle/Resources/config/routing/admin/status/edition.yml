@@ -1,0 +1,5 @@
+app_admin_status_edition_edit_status:
+    path: /edit_status/{id}
+    defaults: { _controller: 'AppBundle:Admin/Status/Edition:editStatus' }
+    requirements:
+        id: \d+

@@ -1,0 +1,3 @@
+app_admin_posture_listing_list_posture:
+    path: /list_posture/
+    defaults: { _controller: 'AppBundle:Admin/Posture/Listing:listPosture' }

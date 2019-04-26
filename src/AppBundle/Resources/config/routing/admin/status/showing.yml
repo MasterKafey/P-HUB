@@ -1,0 +1,5 @@
+app_admin_status_showing_show_status:
+    path: /show_status/{id}
+    defaults: { _controller: 'AppBundle:Admin/Status/Showing:showStatus' }
+    requirements:
+        id: \d+

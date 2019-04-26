@@ -1,0 +1,3 @@
+app_admin_wound_listing_list_wound:
+    path: /list_wound/
+    defaults: { _controller: 'AppBundle:Admin/Wound/Listing:listWound' }

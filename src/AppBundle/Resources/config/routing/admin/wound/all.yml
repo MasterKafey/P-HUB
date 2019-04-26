@@ -1,0 +1,20 @@
+app_admin_wound_creation:
+    prefix: /creation/
+    resource: "creation.yml"
+
+app_admin_wound_deletion:
+    prefix: /deletion/
+    resource: "deletion.yml"
+
+app_admin_wound_edition:
+    prefix: /edition/
+    resource: "edition.yml"
+
+app_admin_wound_listing:
+    prefix: /listing/
+    resource: "listing.yml"
+
+app_admin_wound_showing:
+    prefix: /showing/
+    resource: "showing.yml"
+

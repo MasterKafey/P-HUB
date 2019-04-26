@@ -1,0 +1,5 @@
+app_admin_posture_deletion_delete_posture:
+    path: /delete_posture/{id}
+    defaults: { _controller: 'AppBundle:Admin/Posture/Deletion:deletePosture' }
+    requirements:
+        id: \d+
