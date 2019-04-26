@@ -1,0 +1,5 @@
+app_admin_god_deletion_delete_god:
+    path: /delete_god/{id}
+    defaults: { _controller: 'AppBundle:Admin/God/Deletion:deleteGod' }
+    requirements:
+        id: \d+

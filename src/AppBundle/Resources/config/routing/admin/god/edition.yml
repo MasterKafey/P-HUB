@@ -1,0 +1,5 @@
+app_admin_god_edition_edit_god:
+    path: /edit_god/{id}
+    defaults: { _controller: 'AppBundle:Admin/God/Edition:editGod' }
+    requirements:
+        id: \d+

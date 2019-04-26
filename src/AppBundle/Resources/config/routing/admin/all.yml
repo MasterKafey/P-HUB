@@ -1,0 +1,4 @@
+app_admin_god:
+    prefix: /god/
+    resource: "god/all.yml"
+

@@ -1,0 +1,3 @@
+app_admin_god_creation_create_god:
+    path: /create_god/
+    defaults: { _controller: 'AppBundle:Admin/God/Creation:createGod' }
