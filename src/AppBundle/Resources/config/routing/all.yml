@@ -1,6 +1,14 @@
+app_admin:
+    prefix: /admin/
+    resource: "admin/all.yml"
+
 app_home:
     prefix: /
     resource: "home/all.yml"
+
+app_player:
+    prefix: /player/
+    resource: "player/all.yml"
 
 app_user:
     prefix: /user/

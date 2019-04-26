@@ -1,0 +1,5 @@
+app_player_showing_show_player:
+    path: /show_player/{id}
+    defaults: { _controller: 'AppBundle:Player/Showing:showPlayer' }
+    requirements:
+        id: \d+

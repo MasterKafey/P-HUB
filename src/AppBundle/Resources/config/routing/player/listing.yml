@@ -1,0 +1,3 @@
+app_player_listing_list_player:
+    path: /list_player/
+    defaults: { _controller: 'AppBundle:Player/Listing:listPlayer' }

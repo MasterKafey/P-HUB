@@ -1,0 +1,33 @@
+AppBundle\Entity\Player:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PlayerRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        pseudo:
+            type: string
+            length: 255
+        age:
+            type: integer
+        money:
+            type: integer
+        xp:
+            type: float
+        reputation:
+            type: integer
+        honor:
+            type: integer
+        corruption:
+            type: integer
+        glory:
+            type: integer
+    manyToOne:
+        god:
+            targetEntity: AppBundle\Entity\God
+            cascade: [persist]
+    lifecycleCallbacks: {  }

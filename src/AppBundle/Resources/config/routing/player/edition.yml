@@ -1,0 +1,5 @@
+app_player_edition_edit_player:
+    path: /edit_player/{id}
+    defaults: { _controller: 'AppBundle:Player/Edition:editPlayer' }
+    requirements:
+        id: \d+

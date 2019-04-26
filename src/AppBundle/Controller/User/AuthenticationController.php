@@ -3,12 +3,13 @@
 namespace AppBundle\Controller\User;
 
 use AppBundle\Form\Type\User\Authentication\AuthenticateType;
+use AppBundle\Service\Business\PlayerBusiness;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class AuthenticationController extends Controller
 {
-    public function authenticateAction(AuthenticationUtils $utils)
+    public function authenticateAction(AuthenticationUtils $utils, PlayerBusiness $business)
     {
 
         $form = $this->createForm(AuthenticateType::class);

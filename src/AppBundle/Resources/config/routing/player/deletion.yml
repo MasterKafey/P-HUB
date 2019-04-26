@@ -1,0 +1,5 @@
+app_player_deletion_delete_player:
+    path: /delete_player/{id}
+    defaults: { _controller: 'AppBundle:Player/Deletion:deletePlayer' }
+    requirements:
+        id: \d+

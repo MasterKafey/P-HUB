@@ -23,11 +23,11 @@ class UserChecker implements UserCheckerInterface
         }
 
         if (!$user->getEnabled()) {
-            throw new AccountExpiredException('Account not enable yet');
+            throw new AccountExpiredException('user.account.not_enabled');
         }
 
         if ($user->getBlocked()) {
-            throw new DisabledException('Account blocked');
+            throw new DisabledException('user.account.blocked');
         }
     }
 }

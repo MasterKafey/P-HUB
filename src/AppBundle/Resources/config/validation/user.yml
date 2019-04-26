@@ -1,0 +1,38 @@
+AppBundle\Entity\User:
+    constraints:
+        -   Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+                fields: [email]
+                message: user.email.already_used
+                groups: [registration]
+        -   Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+                fields: [username]
+                message: user.username.already_used
+                groups: [registration]
+    properties:
+        email:
+            -   NotBlank:
+                    message: user.email.blank
+                    groups: [registration, edition, requestNewPassword]
+            -   AppBundle\Validator\Email:
+                    message: user.email.invalid
+                    groups: [registration, edition, requestNewPassword]
+        username:
+            -   NotBlank:
+                    message: user.username.blank
+                    groups: [registration, edition]
+            -   Length:
+                    min: 3
+                    max: 50
+                    minMessage: user.username.short
+                    maxMessage: user.username.long
+                    groups: [registration, edition]
+        plainPassword:
+            -   NotBlank:
+                    message: user.plain_password.blank
+                    groups: [registration, edition]
+            -   Length:
+                    min: 5
+                    max: 50
+                    minMessage: user.plain_password.short
+                    maxMessage: user.plain_password.long
+                    groups: [registration, edition]

@@ -1,0 +1,20 @@
+constraint:
+    email:
+        invalid: Adresse e-mail invalide
+
+user:
+    email:
+        already_used: L'adresse e-mail est déjà utilisée
+        blank: L'adresse e-mail est obligatoire
+        invalid: L'adresse e-mail est invalide
+    username:
+        already_used: Le nom d'utilisateur est déjà utilisée
+        blank: Le nom d'utilisateur est obligatoire
+        short: Le nom d'utilisateur doit contenir au mois {{ limit }} caractère(s)
+        long: Le mot de passe ne peut excéder {{ limit }} caractère(s)
+    plain_password:
+        blank: Le mot de passe est obligatoire
+        short: Le mot de passe doit contenir au moins {{ limit }} caractère(s)
+        long: Le mot de passe ne peut excéder {{ limit }} caractère(s)
+        mismatch: Les deux mots de passe ne sont pas identiques
+        invalid: Le mot de passe est invalide

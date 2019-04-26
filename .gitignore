@@ -16,3 +16,4 @@
 /vendor/
 /web/bundles/
 /.idea/
+/src/AppBundle/Resources/config/parameters/parameters.yml

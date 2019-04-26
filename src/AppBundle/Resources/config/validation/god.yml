@@ -1,0 +1,17 @@
+AppBundle\Entity\God:
+    constraints:
+    -   Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity:
+            fields: [name]
+            message: god.name.already_use
+            groups: [creation, edition]
+    properties:
+        name:
+        -   NotBlank:
+                message: god.name.blank
+                groups: [creation, edition]
+        -   Length:
+                min: 2
+                max: 100
+                minMessage: god.name.short
+                maxMessage: god.name.long
+                groups: [creation, edition]

@@ -1,0 +1,3 @@
+app_player_creation_create_player:
+    path: /create_player/
+    defaults: { _controller: 'AppBundle:Player/Creation:createPlayer' }
