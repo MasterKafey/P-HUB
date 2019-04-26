@@ -1,0 +1,3 @@
+app_admin_item_creation_create_item:
+    path: /create_item/
+    defaults: { _controller: 'AppBundle:Admin/Item/Creation:createItem' }
