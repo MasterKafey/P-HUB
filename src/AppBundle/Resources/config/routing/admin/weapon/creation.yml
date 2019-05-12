@@ -1,3 +1,0 @@
-app_admin_weapon_creation_create_weapon:
-    path: /create_weapon/
-    defaults: { _controller: 'AppBundle:Admin/Weapon/Creation:createWeapon' }

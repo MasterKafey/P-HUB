@@ -36,4 +36,9 @@ AppBundle\Entity\User:
             type: string
             length: 255
             nullable: true
+    oneToMany:
+        players:
+            targetEntity: AppBundle\Entity\Player
+            cascade: [persist, remove]
+            mappedBy: user
     lifecycleCallbacks: {  }

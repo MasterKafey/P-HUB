@@ -9,11 +9,10 @@ AppBundle\Entity\Weapon:
             generator:
                 strategy: AUTO
     fields:
-        name:
-            type: string
-            length: 255
-            unique: true
-        description:
-            type: string
-            length: 255
+        status:
+            type: integer
+    manyToOne:
+        model:
+            targetEntity: AppBundle\Entity\WeaponModel
+            cascade: [persist]
     lifecycleCallbacks: {  }

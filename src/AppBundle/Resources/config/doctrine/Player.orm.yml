@@ -30,4 +30,8 @@ AppBundle\Entity\Player:
         god:
             targetEntity: AppBundle\Entity\God
             cascade: [persist]
+        user:
+            targetEntity: AppBundle\Entity\User
+            cascade: [persist]
+            inversedBy: players
     lifecycleCallbacks: {  }

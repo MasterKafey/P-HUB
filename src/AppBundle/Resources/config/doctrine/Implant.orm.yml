@@ -9,11 +9,10 @@ AppBundle\Entity\Implant:
             generator:
                 strategy: AUTO
     fields:
-        name:
-            type: string
-            length: 255
-            unique: true
-        description:
-            type: string
-            length: '2047'
+        status:
+            type: integer
+    manyToOne:
+        model:
+            targetEntity: AppBundle\Entity\ImplantModel
+            cascade: [persist]
     lifecycleCallbacks: {  }

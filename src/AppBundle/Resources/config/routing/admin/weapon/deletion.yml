@@ -1,5 +1,0 @@
-app_admin_weapon_deletion_delete_weapon:
-    path: /delete_weapon/{id}
-    defaults: { _controller: 'AppBundle:Admin/Weapon/Deletion:deleteWeapon' }
-    requirements:
-        id: \d+

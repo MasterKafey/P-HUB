@@ -12,6 +12,7 @@ class CreationController extends Controller
     public function createPlayerAction(Request $request)
     {
         $player = new Player();
+        $player->setUser($this->getUser());
         $form = $this->createForm(CreatePlayerType::class, $player);
         $form->handleRequest($request);
 

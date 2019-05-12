@@ -7,21 +7,32 @@ namespace AppBundle\Entity;
  */
 class Implant
 {
+    const STATUS_ENABLED = 1;
+    const STATUS_DISABLED = 2;
+    const STATUS_CORRUPTED = 3;
+    const STATUS_DAMAGED = 4;
+
+    public static $STATUS_TRANSLATION_KEY = array(
+        self::STATUS_ENABLED => 'status.enabled',
+        self::STATUS_DISABLED => 'status.disabled',
+        self::STATUS_CORRUPTED => 'status.corrupted',
+        self::STATUS_DAMAGED => 'status.damaged',
+    );
+
     /**
      * @var int
      */
     private $id;
 
     /**
-     * @var string
+     * @var ImplantModel
      */
-    private $name;
+    private $model;
 
     /**
-     * @var string
+     * @var int
      */
-    private $description;
-
+    private $status;
 
     /**
      * Get id.
@@ -34,50 +45,47 @@ class Implant
     }
 
     /**
-     * Set name.
+     * Set model.
      *
-     * @param string $name
-     *
+     * @param ImplantModel $model
      * @return Implant
      */
-    public function setName($name)
+    public function setModel($model)
     {
-        $this->name = $name;
+        $this->model = $model;
 
         return $this;
     }
 
     /**
-     * Get name.
+     * Get model.
      *
-     * @return string
+     * @return ImplantModel
      */
-    public function getName()
+    public function getModel()
     {
-        return $this->name;
+        return $this->model;
     }
 
     /**
-     * Set description.
+     * Set status.
      *
-     * @param string $description
-     *
+     * @param int $status
      * @return Implant
      */
-    public function setDescription($description)
+    public function setStatus($status)
     {
-        $this->description = $description;
-
+        $this->status = $status;
         return $this;
     }
 
     /**
-     * Get description.
+     * Get status.
      *
-     * @return string
+     * @return int
      */
-    public function getDescription()
+    public function getStatus()
     {
-        return $this->description;
+        return $this->status;
     }
 }

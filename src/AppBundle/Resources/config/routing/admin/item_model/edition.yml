@@ -1,0 +1,5 @@
+app_admin_item_model_edition_edit_item_model:
+    path: /edit_item_model/{id}
+    defaults: { _controller: 'AppBundle:Admin/ItemModel/Edition:editItemModel' }
+    requirements:
+        id: \d+

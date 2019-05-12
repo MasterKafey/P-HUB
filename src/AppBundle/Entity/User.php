@@ -68,6 +68,11 @@ class User implements UserInterface
      */
     private $passwordToken;
 
+    /**
+     * @var Player[]
+     */
+    private $players;
+
     public function __construct()
     {
         $this->setRoles([]);
@@ -343,5 +348,42 @@ class User implements UserInterface
     public function getPasswordToken()
     {
         return $this->passwordToken;
+    }
+
+    /**
+     * Set players.
+     *
+     * @param Player[] $players
+     *
+     * @return User
+     */
+    public function setPlayers($players)
+    {
+        $this->players = $players;
+
+        return $this;
+    }
+
+    /**
+     * Get players.
+     *
+     * @return Player[]
+     */
+    public function getPlayers()
+    {
+        return $this->players;
+    }
+
+    /**
+     * Add player.
+     *
+     * @param Player $player
+     * @return User
+     */
+    public function addPlayer($player)
+    {
+        $this->players[] = $player;
+
+        return $this;
     }
 }

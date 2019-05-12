@@ -1,5 +1,0 @@
-app_admin_weapon_showing_show_weapon:
-    path: /show_weapon/{id}
-    defaults: { _controller: 'AppBundle:Admin/Weapon/Showing:showWeapon' }
-    requirements:
-        id: \d+

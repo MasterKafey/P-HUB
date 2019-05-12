@@ -1,0 +1,5 @@
+app_admin_implant_model_showing_show_implant_model:
+    path: /show_implant_model/{id}
+    defaults: { _controller: 'AppBundle:Admin/ImplantModel/Showing:showImplantModel' }
+    requirements:
+        id: \d+

@@ -13,15 +13,9 @@ class Item
     private $id;
 
     /**
-     * @var string
+     * @var ItemModel
      */
-    private $name;
-
-    /**
-     * @var string
-     */
-    private $description;
-
+    private $model;
 
     /**
      * Get id.
@@ -34,50 +28,26 @@ class Item
     }
 
     /**
-     * Set name.
+     * Set model.
      *
-     * @param string $name
+     * @param ItemModel $model
      *
      * @return Item
      */
-    public function setName($name)
+    public function setModel($model)
     {
-        $this->name = $name;
+        $this->model = $model;
 
         return $this;
     }
 
     /**
-     * Get name.
+     * Get model.
      *
-     * @return string
+     * @return ItemModel
      */
-    public function getName()
+    public function getModel()
     {
-        return $this->name;
-    }
-
-    /**
-     * Set description.
-     *
-     * @param string $description
-     *
-     * @return Item
-     */
-    public function setDescription($description)
-    {
-        $this->description = $description;
-
-        return $this;
-    }
-
-    /**
-     * Get description.
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->description;
+        return $this->model;
     }
 }

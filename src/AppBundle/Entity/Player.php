@@ -13,6 +13,11 @@ class Player
     private $id;
 
     /**
+     * @var User
+     */
+    private $user;
+
+    /**
      * @var string
      */
     private $pseudo;
@@ -75,6 +80,30 @@ class Player
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set user.
+     *
+     * @param User $user
+     *
+     * @return Player
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user.
+     *
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 
     /**

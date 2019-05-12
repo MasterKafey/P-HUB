@@ -1,0 +1,3 @@
+app_admin_implant_model_listing_list_implant_model:
+    path: /list_implant_model/
+    defaults: { _controller: 'AppBundle:Admin/ImplantModel/Listing:listImplantModel' }

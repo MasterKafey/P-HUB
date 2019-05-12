@@ -1,3 +1,0 @@
-app_admin_weapon_listing_list_weapon:
-    path: /list_weapon/
-    defaults: { _controller: 'AppBundle:Admin/Weapon/Listing:listWeapon' }

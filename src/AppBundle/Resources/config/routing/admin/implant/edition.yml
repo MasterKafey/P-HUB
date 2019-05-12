@@ -1,5 +1,0 @@
-app_admin_implant_edition_edit_implant:
-    path: /edit_implant/{id}
-    defaults: { _controller: 'AppBundle:Admin/Implant/Edition:editImplant' }
-    requirements:
-        id: \d+

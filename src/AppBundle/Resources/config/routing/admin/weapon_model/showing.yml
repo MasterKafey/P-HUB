@@ -1,0 +1,5 @@
+app_admin_weapon_model_showing_show_weapon_model:
+    path: /show_weapon_model/{id}
+    defaults: { _controller: 'AppBundle:Admin/WeaponModel/Showing:showWeaponModel' }
+    requirements:
+        id: \d+

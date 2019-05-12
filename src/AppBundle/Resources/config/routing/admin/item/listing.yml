@@ -1,3 +1,0 @@
-app_admin_item_listing_list_item:
-    path: /list_item/
-    defaults: { _controller: 'AppBundle:Admin/Item/Listing:listItem' }

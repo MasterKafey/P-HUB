@@ -1,5 +1,0 @@
-app_admin_item_edition_edit_item:
-    path: /edit_item/{id}
-    defaults: { _controller: 'AppBundle:Admin/Item/Edition:editItem' }
-    requirements:
-        id: \d+

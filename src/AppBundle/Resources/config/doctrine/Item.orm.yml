@@ -8,12 +8,8 @@ AppBundle\Entity\Item:
             id: true
             generator:
                 strategy: AUTO
-    fields:
-        name:
-            type: string
-            length: 255
-            unique: true
-        description:
-            type: string
-            length: '2047'
+    manyToOne:
+        model:
+            targetEntity: AppBundle\Entity\ItemModel
+            cascade: [persist]
     lifecycleCallbacks: {  }

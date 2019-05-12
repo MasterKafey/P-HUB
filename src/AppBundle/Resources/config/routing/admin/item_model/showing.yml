@@ -1,0 +1,5 @@
+app_admin_item_model_showing_show_item_model:
+    path: /show_item_model/{id}
+    defaults: { _controller: 'AppBundle:Admin/ItemModel/Showing:showItemModel' }
+    requirements:
+        id: \d+
