@@ -2,3 +2,5 @@ parameters:
     mailer_params:
         sender_address: contact@phub.com
         sender_name: 'PHUB'
+    vich_uploader.directory_upload.path: /uploads
+    vich_uploader.directory_upload.protected_path: '%kernel.project_dir%/uploads/protected_file/'

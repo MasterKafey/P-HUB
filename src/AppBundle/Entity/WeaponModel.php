@@ -2,6 +2,8 @@
 
 namespace AppBundle\Entity;
 
+use Symfony\Component\DomCrawler\Image;
+
 /**
  * WeaponModel
  */
@@ -22,6 +24,10 @@ class WeaponModel
      */
     private $description;
 
+    /**
+     * @var File
+     */
+    private $image;
 
     /**
      * Get id.
@@ -79,5 +85,28 @@ class WeaponModel
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set image.
+     *
+     * @param Image $image
+     * @return WeaponModel
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get image.
+     *
+     * @return File
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }

@@ -2,6 +2,8 @@
 
 namespace AppBundle\Entity;
 
+use Symfony\Component\DomCrawler\Image;
+
 /**
  * ItemModel
  */
@@ -21,6 +23,11 @@ class ItemModel
      * @var string
      */
     private $description;
+
+    /**
+     * @var Image
+     */
+    private $image;
 
 
     /**
@@ -79,5 +86,27 @@ class ItemModel
     public function getDescription()
     {
         return $this->description;
+    }
+
+    /**
+     * Set image.
+     *
+     * @param File $image
+     * @return ItemModel
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+        return $this;
+    }
+
+    /**
+     * Get image.
+     *
+     * @return Image
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }

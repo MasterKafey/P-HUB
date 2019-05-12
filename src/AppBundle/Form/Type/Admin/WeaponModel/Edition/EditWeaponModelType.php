@@ -6,6 +6,7 @@ namespace AppBundle\Form\Type\Admin\WeaponModel\Edition;
 
 use AppBundle\Entity\Weapon;
 use AppBundle\Entity\WeaponModel;
+use AppBundle\Form\Type\Admin\File\Edition\EditFileType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -18,7 +19,11 @@ class EditWeaponModelType extends AbstractType
     {
         $builder
             ->add('name', TextType::class)
-            ->add('description', TextareaType::class);
+            ->add('description', TextareaType::class)
+            ->add('image', EditFileType::class, array(
+                'required' => false,
+            ))
+        ;
     }
 
     public function configureOptions(OptionsResolver $resolver)

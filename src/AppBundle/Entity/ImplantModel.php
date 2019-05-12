@@ -22,6 +22,10 @@ class ImplantModel
      */
     private $description;
 
+    /**
+     * @var File
+     */
+    private $image;
 
     /**
      * Get id.
@@ -79,5 +83,16 @@ class ImplantModel
     public function getDescription()
     {
         return $this->description;
+    }
+
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    public function setImage($image)
+    {
+        $this->image = $image;
+        return $this;
     }
 }

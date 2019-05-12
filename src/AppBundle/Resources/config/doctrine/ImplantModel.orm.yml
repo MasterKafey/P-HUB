@@ -16,4 +16,8 @@ AppBundle\Entity\ImplantModel:
         description:
             type: string
             length: 2048
+    oneToOne:
+        image:
+            targetEntity: AppBundle\Entity\File
+            cascade: [persist]
     lifecycleCallbacks: {  }

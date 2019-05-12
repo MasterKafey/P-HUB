@@ -77,3 +77,14 @@ swiftmailer:
 sensio_framework_extra:
    router:
         annotations: false
+
+vich_uploader:
+    db_driver: orm
+    mappings:
+        file:
+            uri_prefix:         '%vich_uploader.directory_upload.path%'
+            upload_destination: '%kernel.project_dir%/web%vich_uploader.directory_upload.path%'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        protected_file:
+            upload_destination: '%vich_uploader.directory_upload.protected_path%'
+            namer: Vich\UploaderBundle\Naming\UniqidNamer

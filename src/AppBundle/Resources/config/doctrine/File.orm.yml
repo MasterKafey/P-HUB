@@ -1,7 +1,7 @@
-AppBundle\Entity\ItemModel:
+AppBundle\Entity\File:
     type: entity
     table: null
-    repositoryClass: AppBundle\Repository\ItemModelRepository
+    repositoryClass: AppBundle\Repository\FileRepository
     id:
         id:
             type: integer
@@ -12,12 +12,9 @@ AppBundle\Entity\ItemModel:
         name:
             type: string
             length: 255
-            unique: true
-        description:
+        path:
             type: string
-            length: 2048
-    oneToOne:
-        image:
-            targetEntity: AppBundle\Entity\File
-            cascade: [persist]
+            length: 255
+        lastUpdate:
+            type: datetime
     lifecycleCallbacks: {  }
