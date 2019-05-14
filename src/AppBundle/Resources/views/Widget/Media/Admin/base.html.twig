@@ -1,0 +1,30 @@
+<div class="media message tabs">
+    <figure class="pull-left rounded-image message__img">
+        <img class="media-object" src="{{ image }}" alt="user">
+    </figure>
+    <div class="media-body">
+        <h4 class="media-heading message__heading">
+            {{ title }}
+        </h4>
+        <p class="message__msg">
+            {{ text }}
+        </p>
+        <label class="message__controls--opener" for="msg-o4">
+            <i class="pe-7s-note"></i>
+        </label>
+        <div class="message__controls--cont">
+            <ul class="message__controls">
+                {% for button in buttons %}
+                    <li>
+                        <a>
+                            <i class="{{ button.icon }}"></i>
+                            <span>
+                                {{ button.text }}
+                            </span>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,26 @@
 {% extends '@Layout/Page/Default/base.html.twig' %}
+
+{% block stylesheets_html %}
+    {% include '@Layout/Page/Admin/stylesheets.html.twig' %}
+{% endblock stylesheets_html %}
+
+{% block body_html %}
+    {% include '@Widget/TopBar/Admin/base.html.twig' with {'tabulations': tabulation_business.routeNavBarTabulations(app.request.attributes.get('_route'))} %}
+    <div class="wrapper">
+        {% include '@Widget/Sidebar/Admin/base.html.twig' with {'tabulations': tabulation_business.tabulations('admin/sidebar.yml')} %}
+        <section class="content">
+            {% block body %}
+
+            {% endblock body %}
+            {% block footer %}
+                <footer class="footer-brand">
+                    <img src="img/logo_trim.png">
+                    <p>© 2014 Glazzed. All rights reserved</p>
+                </footer>
+            {% endblock footer %}
+        </section>
+    </div>
+    {% block javascripts_html %}
+        {% include '@Layout/Page/Admin/javascripts.html.twig' %}
+    {% endblock javascripts_html %}
+{% endblock body_html %}

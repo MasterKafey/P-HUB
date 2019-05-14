@@ -1,0 +1,3 @@
+app_admin_player_listing:
+    prefix: /listing/
+    resource: "listing.yml"

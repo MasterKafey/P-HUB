@@ -1,0 +1,19 @@
+AppBundle\Entity\InventoryItemModel:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\InventoryItemModelRepository
+    inheritanceType: JOINED
+    discriminatorColumn:
+        name: discr
+        type: string
+    discriminatorMap:
+        weapon_model: WeaponModel
+        item_model: ItemModel
+        implant_model: ImplantModel
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

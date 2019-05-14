@@ -1,0 +1,8 @@
+app_admin_personage_model_listing_list_personage_model:
+    path: /list_personage_model/
+    defaults: { _controller: 'AppBundle:Admin/PersonageModel/Listing:listPersonageModel' }
+    options:
+        navbar:
+        -   icon: fa fa-plus
+            route: app_admin_personage_model_creation_create_personage_model
+            text: Ajouter un personnage

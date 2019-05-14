@@ -22,7 +22,6 @@ class Status
      */
     private $description;
 
-
     /**
      * Get id.
      *

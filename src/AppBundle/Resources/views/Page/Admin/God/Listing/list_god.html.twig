@@ -1,5 +1,15 @@
 {% extends '@Layout/Page/Admin/base.html.twig' %}
 
 {% block body %}
-    {{ dump(gods) }}
+    <div class="row">
+        <div class="col-md-5">
+            {% for god in gods %}
+                {% set buttons = [{
+                    'icon': 'fa fa-eye',
+                    'text': 'Afficher'
+                }] %}
+                {% include '@Widget/Media/Admin/base.html.twig' with {'image': god.image is not null ? vich_uploader_asset(god.image, 'file') : '#', 'title': god.name, 'text': god.description, 'buttons': buttons} %}
+            {% endfor %}
+        </div>
+    </div>
 {% endblock body %}

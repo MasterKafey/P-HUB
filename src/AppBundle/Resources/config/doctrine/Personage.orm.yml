@@ -1,0 +1,38 @@
+AppBundle\Entity\Personage:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PersonageRepository
+    inheritanceType: JOINED
+    discriminatorColumn:
+        name: discr
+        type: string
+    discriminatorMap:
+        personage: Personage
+        player: Player
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        money:
+            type: integer
+        xp:
+            type: float
+        reputation:
+            type: integer
+        honor:
+            type: integer
+        corruption:
+            type: integer
+        glory:
+            type: integer
+        special:
+            type: boolean
+    oneToOne:
+        inventory:
+            targetEntity: AppBundle\Entity\Inventory
+            cascade: [persist]
+            inversedBy: personage
+    lifecycleCallbacks: {  }

@@ -2,12 +2,6 @@ AppBundle\Entity\Weapon:
     type: entity
     table: null
     repositoryClass: AppBundle\Repository\WeaponRepository
-    id:
-        id:
-            type: integer
-            id: true
-            generator:
-                strategy: AUTO
     fields:
         status:
             type: integer

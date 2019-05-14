@@ -1,0 +1,12 @@
+-   text: player
+    route: app_admin_player_listing_list_player
+    icon: fas fa-user-secret
+-   text: rank
+    route: app_admin_rank_listing_list_rank
+    icon: fas fa-id-badge
+-   text: god
+    route: app_admin_god_listing_list_god
+    icon: fab fa-superpowers
+-   text: personage
+    route: app_admin_personage_model_listing_list_personage_model
+    icon: fas fa-users

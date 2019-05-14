@@ -17,6 +17,9 @@ class EditionController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
 
             $em = $this->getDoctrine()->getManager();
+            if ($form->get('file')->get('delete-file')->getData() && $god->getImage()) {
+                $em->remove($god->getImage());
+            }
             $em->persist($god);
             $em->flush();
 

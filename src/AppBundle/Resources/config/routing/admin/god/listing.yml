@@ -1,3 +1,8 @@
 app_admin_god_listing_list_god:
     path: /list_god/
     defaults: { _controller: 'AppBundle:Admin/God/Listing:listGod' }
+    options:
+        navbar:
+            - route: app_admin_god_creation_create_god
+              icon: fa fa-plus
+              text: Ajouter

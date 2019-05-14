@@ -12,4 +12,10 @@ AppBundle\Entity\God:
         name:
             type: string
             length: 255
+        description:
+            type: string
+            length: 2048
+    oneToOne:
+        image:
+            targetEntity: AppBundle\Entity\File
     lifecycleCallbacks: {  }

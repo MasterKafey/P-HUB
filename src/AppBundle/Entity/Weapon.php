@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 /**
  * Weapon
  */
-class Weapon
+class Weapon extends InventoryItem
 {
     const STATUS_ENABLED = 1;
     const STATUS_DISABLED = 2;
@@ -20,11 +20,6 @@ class Weapon
     );
 
     /**
-     * @var int
-     */
-    private $id;
-
-    /**
      * @var WeaponModel
      */
     private $model;
@@ -33,16 +28,6 @@ class Weapon
      * @var integer
      */
     private $status;
-
-    /**
-     * Get id.
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set model.

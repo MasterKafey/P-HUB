@@ -1,0 +1,5 @@
+app_admin_personage_model_showing_show_personage_model:
+    path: /show_personage_model/{id}
+    defaults: { _controller: 'AppBundle:Admin/PersonageModel/Showing:showPersonageModel' }
+    requirements:
+        id: \d+

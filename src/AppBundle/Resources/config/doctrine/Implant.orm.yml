@@ -2,12 +2,6 @@ AppBundle\Entity\Implant:
     type: entity
     table: null
     repositoryClass: AppBundle\Repository\ImplantRepository
-    id:
-        id:
-            type: integer
-            id: true
-            generator:
-                strategy: AUTO
     fields:
         status:
             type: integer

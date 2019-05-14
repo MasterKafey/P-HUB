@@ -1,0 +1,142 @@
+{#
+<article class="widget">
+    <header class="widget__header">
+        <div class="widget__title">
+            <i class="pe-7f-user"></i>
+            <h3>{{ personage.pseudo }}</h3>
+        </div>
+    </header>
+    <div class="widget__content">
+        <div class="clearfix"></div>
+        <div class="members__container">
+            <div class="media message">
+                <div class="media-body">
+                    <input type="checkbox" class="btn-more-check" id="more2" checked="">
+                    <label class="c-btn--more" for="more2"></label>
+                    <div class="message__details">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>Age</td>
+                                <td>{{ personage.age }}</td>
+                            </tr>
+                            <tr>
+                                <td>Crédit</td>
+                                <td>{{ personage.money }}</td>
+                            </tr>
+                            <tr>
+                                <td>Expérience</td>
+                                <td>{{ personage.xp }}</td>
+                            </tr>
+                            <tr>
+                                <td>Réputation</td>
+                                <td>{{ personage.reputation }}</td>
+                            </tr>
+                            <tr>
+                                <td>Honneur</td>
+                                <td>
+                                    {{ personage.honor }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Corruption</td>
+                                <td>
+                                    {{ personage.corruption }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gloire</td>
+                                <td>
+                                    {{ personage.glory }}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="members__footer">
+            <button class="members__load-more"><span>+</span> Load More...</button>
+            <button class="members__search">
+                <i class="pe-7s-graph2"></i> Analytics
+            </button>
+        </div>
+
+    </div>
+</article>#}
+
+<article class="widget">
+    <header class="widget__header">
+        <div class="widget__title">
+            <img class="media-object" src="{{ vich_uploader_asset(personage.avatar, 'file') }}" alt="user" width="auto"
+                 height="100%">
+        </div>
+        <div class="widget__config">
+            {% block configuration_button %}
+                <a href="{{ showing_route is defined ? path(showing_route) : '#' }}">
+                    <i class="fas fa-eye"></i>
+                </a>
+                <a href="{{ manage_route is defined ? path(manage_route) : '#' }}">
+                    <i class="fas fa-wrench"></i>
+                </a>
+            {% endblock configuration_button %}
+        </div>
+    </header>
+
+    <div class="widget__content">
+        <div class="clearfix"></div>
+        <div class="members__container">
+            <div class="media message checked">
+                <div class="media-body">
+                    <h4 class="media-heading message__heading">{{ personage.pseudo }}</h4>
+                    <input type="checkbox" class="btn-more-check" id="more2" checked>
+                    <div class="message__details">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>Age</td>
+                                <td>{{ personage.age }}</td>
+                            </tr>
+                            <tr>
+                                <td>Crédit</td>
+                                <td>{{ personage.money }}</td>
+                            </tr>
+                            <tr>
+                                <td>Expérience</td>
+                                <td>{{ personage.xp }}</td>
+                            </tr>
+                            <tr>
+                                <td>Réputation</td>
+                                <td>{{ personage.reputation }}</td>
+                            </tr>
+                            <tr>
+                                <td>Honneur</td>
+                                <td>
+                                    {{ personage.honor }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Corruption</td>
+                                <td>
+                                    {{ personage.corruption }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Gloire</td>
+                                <td>
+                                    {{ personage.glory }}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

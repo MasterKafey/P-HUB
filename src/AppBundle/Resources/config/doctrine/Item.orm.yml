@@ -2,12 +2,6 @@ AppBundle\Entity\Item:
     type: entity
     table: null
     repositoryClass: AppBundle\Repository\ItemRepository
-    id:
-        id:
-            type: integer
-            id: true
-            generator:
-                strategy: AUTO
     manyToOne:
         model:
             targetEntity: AppBundle\Entity\ItemModel

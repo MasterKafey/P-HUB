@@ -1,0 +1,21 @@
+AppBundle\Entity\Inventory:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\InventoryRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    oneToOne:
+        personage:
+            targetEntity: AppBundle\Entity\Personage
+            cascade: [persist]
+            mappedBy: inventory
+    oneToMany:
+        items:
+            targetEntity: AppBundle\Entity\InventoryItem
+            cascade: [persist]
+            mappedBy: inventory
+    lifecycleCallbacks: {  }

@@ -1,0 +1,3 @@
+app_admin_personage_model_creation_create_personage_model:
+    path: /create_personage_model/
+    defaults: { _controller: 'AppBundle:Admin/PersonageModel/Creation:createPersonageModel' }

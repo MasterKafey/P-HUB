@@ -1,0 +1,38 @@
+AppBundle\Entity\PersonageModel:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\PersonageModelRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        pseudo:
+            type: string
+            length: 255
+        age:
+            type: integer
+        money:
+            type: integer
+        xp:
+            type: float
+        reputation:
+            type: integer
+        honor:
+            type: integer
+        corruption:
+            type: integer
+        glory:
+            type: integer
+        special:
+            type: boolean
+    oneToOne:
+        avatar:
+            targetEntity: AppBundle\Entity\File
+            cascade: [persist, remove]
+        inventory:
+            targetEntity: AppBundle\Entity\InventoryModel
+            cascade: [persist, remove]
+    lifecycleCallbacks: {  }

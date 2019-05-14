@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 /**
  * Implant
  */
-class Implant
+class Implant extends InventoryItem
 {
     const STATUS_ENABLED = 1;
     const STATUS_DISABLED = 2;
@@ -20,11 +20,6 @@ class Implant
     );
 
     /**
-     * @var int
-     */
-    private $id;
-
-    /**
      * @var ImplantModel
      */
     private $model;
@@ -33,16 +28,6 @@ class Implant
      * @var int
      */
     private $status;
-
-    /**
-     * Get id.
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set model.

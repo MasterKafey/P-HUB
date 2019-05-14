@@ -40,6 +40,9 @@ twig:
         '%kernel.project_dir%/src/AppBundle/Resources/views/Page': 'Page'
         '%kernel.project_dir%/src/AppBundle/Resources/views/Layout': 'Layout'
         '%kernel.project_dir%/src/AppBundle/Resources/views/Mail': 'Mail'
+        '%kernel.project_dir%/src/AppBundle/Resources/views/Widget': 'Widget'
+    globals:
+        tabulation_business: '@AppBundle\Service\Business\NavBarBusiness'
 
 # Doctrine Configuration
 doctrine:

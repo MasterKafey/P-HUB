@@ -1,0 +1,43 @@
+<article class="widget widget__form">
+    <div class="row">
+        <header class="widget__header">
+            <div class="widget__title">
+                <i class="pe-7s-menu"></i>
+                <h3>{{ title }}</h3>
+            </div>
+            <div class="widget__config">
+                <a href="#"><i class="pe-7f-refresh"></i></a>
+                <a href="#"><i class="pe-7s-close"></i></a>
+            </div>
+        </header>
+    </div>
+    <div class="widget__content">
+        {{ form_start(form) }}
+        {% for form_child in form if 'hidden' not in form_child.vars.block_prefixes %}
+            <div class="row">
+                {% if 'checkbox' in form_child.vars.block_prefixes %}
+                    <label class="stacked-label">
+                        {{ form_widget(form_child) }}
+                        <label for="{{ form_child.vars.id }}"></label>
+                    </label>
+                    <input type="text" class="stacked-input" readonly value="{{ form_child.vars.label }}">
+                {% elseif ('create_file' in form_child.vars.block_prefixes) or 'edit_file' in form_child.vars.block_prefixes %}
+                    <label class="full-label">
+                        {{ form_widget(form_child) }}
+                        <i class="{{ form_child.vars.attr.icon|default('fas fa-align-left') }}"></i>
+                        <span class="label">{{ form_child.vars.label|default('Fichier') }}</span>
+                    </label>
+                {% else %}
+                    <label for="input-{{ loop.index }}" class="stacked-label">
+                        <i class="{{ form_child.vars.attr.icon|default('fas fa-align-left') }}"></i>
+                    </label>
+                    {{ form_widget(form_child, {'attr': {'class': 'stacked-input'}}) }}
+                {% endif %}
+            </div>
+        {% endfor %}
+        <div class="row">
+            <button>{{ submit_text|default('Valider') }}</button>
+        </div>
+        {{ form_end(form) }}
+    </div>
+</article>

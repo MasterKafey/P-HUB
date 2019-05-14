@@ -1,0 +1,5 @@
+app_admin_personage_model_deletion_delete_personage_model:
+    path: /delete_personage_model/{id}
+    defaults: { _controller: 'AppBundle:Admin/PersonageModel/Deletion:deletePersonageModel' }
+    requirements:
+        id: \d+

@@ -2,22 +2,4 @@ AppBundle\Entity\ImplantModel:
     type: entity
     table: null
     repositoryClass: AppBundle\Repository\ImplantModelRepository
-    id:
-        id:
-            type: integer
-            id: true
-            generator:
-                strategy: AUTO
-    fields:
-        name:
-            type: string
-            length: 255
-            unique: true
-        description:
-            type: string
-            length: 2048
-    oneToOne:
-        image:
-            targetEntity: AppBundle\Entity\File
-            cascade: [persist]
     lifecycleCallbacks: {  }

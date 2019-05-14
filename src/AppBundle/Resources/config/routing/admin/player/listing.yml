@@ -1,0 +1,8 @@
+app_admin_player_listing_list_player:
+    path: /list_player/
+    defaults: { _controller: 'AppBundle:Admin\Player\Listing:listPlayer' }
+    options:
+        navbar:
+            - text: Ajouter un joueur
+              route: app_player_creation_create_player
+              icon: fas fa-plus

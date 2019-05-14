@@ -17,6 +17,7 @@ class EditFileType extends AbstractType
         $builder
             ->add('file', VichFileType::class, array(
                 'allow_delete' => false,
+                'label' => false,
             ))
             ->add('delete-file', CheckboxType::class, array(
                 'mapped' => false,

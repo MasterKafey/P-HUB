@@ -1,0 +1,25 @@
+<aside class="sidebar">
+    <ul class="main-nav">
+        {% for tabulation in tabulations %}
+            <li{% if app.request.attributes.get('_route') == tabulation.route|default('') %} class="main-nav--active"{% endif %}>
+                <a class="main-nav__link" href="{{ tabulation.route is defined ? path(tabulation.route) : '#' }}">
+                    <span class="main-nav__icon">
+                        <i class="{{ tabulation.icon|default('') }}"></i>
+                    </span>
+                    {{ tabulation.text|trans({}, 'sidebar')|default('') }}
+                    {% if tabulation.childs|default([]) is not empty %}
+                        <ul class="main-nav__submenu">
+                            {% for child in tabulation.childs|default([]) %}
+                                <li>
+                                    <a href="{{ kid.route is defined ? path(kid.route) : '#' }}">
+                                        <span>{{ child.text|default('') }}</span>
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</aside>

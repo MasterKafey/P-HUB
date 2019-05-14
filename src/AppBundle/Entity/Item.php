@@ -5,27 +5,13 @@ namespace AppBundle\Entity;
 /**
  * Item
  */
-class Item
+class Item extends InventoryItem
 {
-    /**
-     * @var int
-     */
-    private $id;
 
     /**
      * @var ItemModel
      */
     private $model;
-
-    /**
-     * Get id.
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set model.

@@ -17,6 +17,15 @@ class God
      */
     private $name;
 
+    /**
+     * @var string
+     */
+    private $description;
+
+    /**
+     * @var File
+     */
+    private $image;
 
     /**
      * Get id.
@@ -50,5 +59,53 @@ class God
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set description.
+     *
+     * @param string $description
+     *
+     * @return God
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description.
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set images.
+     *
+     * @param File $image
+     *
+     * @return God
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
+
+        return $this;
+    }
+
+    /**
+     * Get images.
+     *
+     * @return File
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 }
