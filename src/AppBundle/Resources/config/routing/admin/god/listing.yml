@@ -5,4 +5,4 @@ app_admin_god_listing_list_god:
         navbar:
             - route: app_admin_god_creation_create_god
               icon: fa fa-plus
-              text: Ajouter
+              text: Ajouter un dieu

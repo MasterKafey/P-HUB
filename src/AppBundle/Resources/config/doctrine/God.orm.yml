@@ -18,4 +18,5 @@ AppBundle\Entity\God:
     oneToOne:
         image:
             targetEntity: AppBundle\Entity\File
+            cascade: [persist, remove]
     lifecycleCallbacks: {  }

@@ -21,12 +21,25 @@
                         <label for="{{ form_child.vars.id }}"></label>
                     </label>
                     <input type="text" class="stacked-input" readonly value="{{ form_child.vars.label }}">
-                {% elseif ('create_file' in form_child.vars.block_prefixes) or 'edit_file' in form_child.vars.block_prefixes %}
+                {% elseif ('create_file' in form_child.vars.block_prefixes) %}
                     <label class="full-label">
                         {{ form_widget(form_child) }}
                         <i class="{{ form_child.vars.attr.icon|default('fas fa-align-left') }}"></i>
                         <span class="label">{{ form_child.vars.label|default('Fichier') }}</span>
                     </label>
+                {% elseif 'edit_file' in form_child.vars.block_prefixes %}
+                    <label class="full-label">
+                        <i class="{{ form_child.vars.attr.icon|default('fas fa-align-left') }}"></i>
+                        <span class="label">{{ form_child.vars.label|default('Fichier') }}</span>
+                        {{ form_widget(form_child.file.file) }}
+                    </label>
+                    </div>
+                    <div class="row">
+                    <label class="stacked-label">
+                        {{ form_widget(form_child.delete_file, {'attr': {'class': 'custom-checkbox'}}) }}
+                        <label for="{{ form_child.delete_file.vars.id }}"></label>
+                    </label>
+                    <input type="text" class="stacked-input" readonly value="Supprimer image">
                 {% else %}
                     <label for="input-{{ loop.index }}" class="stacked-label">
                         <i class="{{ form_child.vars.attr.icon|default('fas fa-align-left') }}"></i>

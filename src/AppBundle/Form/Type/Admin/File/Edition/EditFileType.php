@@ -19,7 +19,7 @@ class EditFileType extends AbstractType
                 'allow_delete' => false,
                 'label' => false,
             ))
-            ->add('delete-file', CheckboxType::class, array(
+            ->add('delete_file', CheckboxType::class, array(
                 'mapped' => false,
                 'required' => false,
             ))

@@ -2,14 +2,10 @@
 
 {% block body %}
     <div class="row">
-        <div class="col-md-5">
-            {% for god in gods %}
-                {% set buttons = [{
-                    'icon': 'fa fa-eye',
-                    'text': 'Afficher'
-                }] %}
-                {% include '@Widget/Media/Admin/base.html.twig' with {'image': god.image is not null ? vich_uploader_asset(god.image, 'file') : '#', 'title': god.name, 'text': god.description, 'buttons': buttons} %}
-            {% endfor %}
-        </div>
+        {% for god in gods %}
+            <div class="col-md-6">
+                {% include '@Widget/God/Admin/base.html.twig' with {'god': god} %}
+            </div>
+        {% endfor %}
     </div>
 {% endblock body %}

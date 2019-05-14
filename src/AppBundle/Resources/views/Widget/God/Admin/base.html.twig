@@ -1,0 +1,44 @@
+<article class="widget">
+    <header class="widget__header">
+        <div class="widget__title">
+            {% if god.image is not null %}
+                <img class="media-object" src="{{ vich_uploader_asset(god.image, 'file') }}" alt="user" width="auto"
+                     height="100%">
+            {% endif %}
+        </div>
+        <div class="widget__config">
+            {% block configuration_button %}
+                <a href="{{ path('app_admin_god_edition_edit_god', {'id': god.id}) }}">
+                    <i class="fas fa-wrench"></i>
+                </a>
+                <a href="{{ path('app_admin_god_deletion_delete_god', {'id': god.id}) }}">
+                    <i class="fas fa-trash"></i>
+                </a>
+            {% endblock configuration_button %}
+        </div>
+    </header>
+
+    <div class="widget__content">
+        <div class="clearfix"></div>
+        <div class="members__container">
+            <div class="media message checked">
+                <div class="media-body">
+                    <h4 class="media-heading message__heading">{{ god.name }}</h4>
+                    <input type="checkbox" class="btn-more-check" id="more2" checked>
+                    <div class="message__details">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>Description</td>
+                                <td>
+                                    {{ god.description }}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>

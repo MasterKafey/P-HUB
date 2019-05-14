@@ -1,3 +1,8 @@
 app_admin_god_creation_create_god:
     path: /create_god/
     defaults: { _controller: 'AppBundle:Admin/God/Creation:createGod' }
+    options:
+        navbar:
+        -   icon: fa fa-plus
+            route: app_admin_personage_model_creation_create_personage_model
+            text: Ajouter un dieu

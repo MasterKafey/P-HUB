@@ -1,5 +1,10 @@
 app_admin_personage_model_edition_edit_personage_model:
     path: /edit_personage_model/{id}
     defaults: { _controller: 'AppBundle:Admin/PersonageModel/Edition:editPersonageModel' }
+    options:
+        navbar:
+        -   icon: fa fa-plus
+            route: app_admin_personage_model_creation_create_personage_model
+            text: Ajouter un personnage
     requirements:
         id: \d+
