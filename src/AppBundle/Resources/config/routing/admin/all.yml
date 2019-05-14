@@ -42,3 +42,7 @@ app_admin_personage_model:
     prefix: /personage_model/
     resource: "personage_model/all.yml"
 
+app_admin_home:
+    prefix: /
+    resource: "home/all.yml"
+

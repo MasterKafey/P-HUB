@@ -1,3 +1,6 @@
+-   text: main_menu
+    route: app_admin_home_index
+    icon: fas fa-tachometer-alt
 -   text: player
     route: app_admin_player_listing_list_player
     icon: fas fa-user-secret
