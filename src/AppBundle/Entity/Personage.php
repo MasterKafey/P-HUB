@@ -13,11 +13,6 @@ class Personage
     private $id;
 
     /**
-     * @var string
-     */
-    private $pseudo;
-
-    /**
      * @var integer
      */
     private $age;

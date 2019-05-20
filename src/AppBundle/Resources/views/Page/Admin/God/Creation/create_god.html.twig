@@ -1,5 +1,9 @@
 {% extends '@Layout/Page/Admin/base.html.twig' %}
 
 {% block body %}
-    {% include '@Widget/Form/Admin/base.html.twig' with {'title': 'Création d\un dieux', 'form': form} %}
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            {% include '@Widget/Form/Admin/base.html.twig' with {'title': 'Création d\un dieux', 'form': form} %}
+        </div>
+    </div>
 {% endblock body %}

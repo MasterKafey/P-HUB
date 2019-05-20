@@ -1,3 +1,8 @@
 app_admin_implant_model_listing_list_implant_model:
     path: /list_implant_model/
     defaults: { _controller: 'AppBundle:Admin/ImplantModel/Listing:listImplantModel' }
+    options:
+        navbar:
+        - icon: fa fa-plus
+          text: Ajouter un implant
+          route: app_admin_implant_model_creation_create_implant_model

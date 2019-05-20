@@ -1,5 +1,15 @@
 {% extends '@Layout/Page/Admin/base.html.twig' %}
 
 {% block body %}
-    {{ dump(implants) }}
+    {% for implant in implants %}
+        {% if loop.index0 % 2 == 0 %}
+            <div class="row">
+        {% endif %}
+        <div class="col-md-6">
+            {% include '@Widget/Implant/Admin/base.html.twig' with {'implant': implant} %}
+        </div>
+        {% if loop.index0 % 2 != 0 or (loop.last and loop.index0 % 2 == 0)%}
+            </div>
+        {% endif %}
+    {% endfor %}
 {% endblock body %}

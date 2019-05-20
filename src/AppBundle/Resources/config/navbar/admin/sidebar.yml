@@ -13,3 +13,6 @@
 -   text: personage
     route: app_admin_personage_model_listing_list_personage_model
     icon: fas fa-users
+-   text: implant
+    route: app_admin_implant_model_listing_list_implant_model
+    icon: fas fa-bolt

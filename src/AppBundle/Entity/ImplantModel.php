@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 /**
  * ImplantModel
  */
-class ImplantModel extends InventoryModel
+class ImplantModel extends InventoryItemModel
 {
 
 }
