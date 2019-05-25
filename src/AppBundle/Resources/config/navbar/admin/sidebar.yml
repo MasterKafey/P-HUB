@@ -16,3 +16,6 @@
 -   text: implant
     route: app_admin_implant_model_listing_list_implant_model
     icon: fas fa-bolt
+-   text: item
+    route: app_admin_item_model_listing_list_item_model
+    icon: fas fa-cubes

@@ -1,3 +1,8 @@
 app_admin_item_model_creation_create_item_model:
     path: /create_item_model/
     defaults: { _controller: 'AppBundle:Admin/ItemModel/Creation:createItemModel' }
+    options:
+        navbar:
+        -   text: Ajouter un item
+            route: app_admin_item_model_creation_create_item_model
+            icon: 'fas fa-plus-circle'

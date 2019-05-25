@@ -18,9 +18,21 @@ class EditItemModelType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', TextType::class)
-            ->add('description', TextareaType::class)
+            ->add('name', TextType::class, array(
+                'attr' => array(
+                    'icon' => 'fas fa-id-card',
+                    'placeholder' => 'Nom'
+                ),
+            ))
+            ->add('description', TextType::class, array(
+                'attr' => array(
+                    'placeholder' => 'Description'
+                ),
+            ))
             ->add('image', EditFileType::class, array(
+                'attr' => array(
+                    'icon' => 'fas fa-images',
+                ),
                 'required' => false,
             ))
         ;

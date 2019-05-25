@@ -3,3 +3,8 @@ app_admin_item_model_edition_edit_item_model:
     defaults: { _controller: 'AppBundle:Admin/ItemModel/Edition:editItemModel' }
     requirements:
         id: \d+
+    options:
+        navbar:
+        -   text: Ajouter un item
+            route: app_admin_item_model_creation_create_item_model
+            icon: 'fas fa-plus-circle'
