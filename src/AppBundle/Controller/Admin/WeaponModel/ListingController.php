@@ -9,10 +9,10 @@ class ListingController extends Controller
 {
     public function listWeaponModelAction()
     {
-        $weapon_models = $this->getDoctrine()->getRepository(WeaponModel::class)->findAll();
+        $weaponModels = $this->getDoctrine()->getRepository(WeaponModel::class)->findAll();
 
         return $this->render('@Page/Admin/WeaponModel/Listing/list_weapon_model.html.twig', array(
-            'weapon_models' => $weapon_models,
+            'weapon_models' => $weaponModels,
         ));
     }
 }
