@@ -13,6 +13,9 @@
 -   text: personage
     route: app_admin_personage_model_listing_list_personage_model
     icon: fas fa-users
+-   text: weapons
+    route: app_admin_weapon_model_listing_list_weapon_model
+    icon: fas fa-screwdriver
 -   text: implant
     route: app_admin_implant_model_listing_list_implant_model
     icon: fas fa-bolt
