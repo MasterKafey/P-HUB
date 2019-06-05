@@ -15,8 +15,18 @@ class CreateOriginType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', TextType::class)
-            ->add('description', TextareaType::class)
+            ->add('name', TextType::class, array(
+                'attr' => array(
+                    'placeholder' => 'Nom',
+                    'icon' => 'fas fa-id-card'
+                )
+            ))
+            ->add('description', TextType::class, array(
+                'attr' => array(
+                    'placeholder' => 'Description',
+                    'icon' => 'fas fa-id-card'
+                )
+            ))
         ;
     }
 

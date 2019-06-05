@@ -1,3 +1,8 @@
 app_admin_origin_listing_list_origin:
     path: /list_origin/
     defaults: { _controller: 'AppBundle:Admin/Origin/Listing:listOrigin' }
+    options:
+        navbar:
+        - icon: fa fa-plus
+          text: Ajouter une origine
+          route: app_admin_origin_creation_create_origin
