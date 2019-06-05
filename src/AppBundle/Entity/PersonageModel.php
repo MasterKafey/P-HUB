@@ -338,4 +338,9 @@ class PersonageModel
 
         return $this;
     }
+
+    public function __clone()
+    {
+        $this->id = null;
+    }
 }

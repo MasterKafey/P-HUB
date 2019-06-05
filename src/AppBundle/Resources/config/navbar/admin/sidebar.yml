@@ -31,3 +31,6 @@
 -   text: status
     route: app_admin_status_listing_list_status
     icon: fas fa-info
+-   text: posture
+    route: app_admin_posture_listing_list_posture
+    icon: fas fa-user-shield

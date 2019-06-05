@@ -4,7 +4,14 @@
     <div class="row">
         {% for status in statuss %}
             <div class="col-md-4">
-                {% include '@Widget/Status/Admin/base.html.twig' with {'status': status, "showing_route": path("app_admin_status_showing_show_status", {"id": status.id}), "manage_route": path("app_admin_status_edition_edit_status", {"id": status.id})} %}
+                {% include '@Widget/Status/Admin/base.html.twig' with
+                    {
+                        'status': status,
+                        'showing_route': path("app_admin_status_showing_show_status", {"id": status.id}),
+                        'manage_route': path("app_admin_status_edition_edit_status", {"id": status.id}),
+                        'duplicate_route': path("app_admin_status_duplication_duplicate_status", {"id": status.id})
+                    }
+                %}
             </div>
         {% endfor %}
     </div>

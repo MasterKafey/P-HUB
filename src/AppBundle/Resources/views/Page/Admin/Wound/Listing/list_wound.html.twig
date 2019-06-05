@@ -4,7 +4,14 @@
     <div class="row">
         {% for wound in wounds %}
             <div class="col-md-4">
-                {% include '@Widget/Wound/Admin/base.html.twig' with {'wound': wound, "showing_route": path("app_admin_wound_showing_show_wound", {"id": wound.id}), "manage_route": path("app_admin_wound_edition_edit_wound", {"id": wound.id})} %}
+                {% include '@Widget/Wound/Admin/base.html.twig' with
+                    {
+                        'wound': wound,
+                        'showing_route': path("app_admin_wound_showing_show_wound", {"id": wound.id}),
+                        'manage_route': path("app_admin_wound_edition_edit_wound", {"id": wound.id}),
+                        'duplicate_route': path("app_admin_wound_duplication_duplicate_wound", {"id": wound.id})
+                    }
+                %}
             </div>
         {% endfor %}
     </div>

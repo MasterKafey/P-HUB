@@ -108,4 +108,9 @@ class God
     {
         return $this->image;
     }
+
+    public function __clone()
+    {
+        $this->id = null;
+    }
 }

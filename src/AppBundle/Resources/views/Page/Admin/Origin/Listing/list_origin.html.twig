@@ -4,7 +4,14 @@
     <div class="row">
         {% for origin in origins %}
             <div class="col-md-6">
-                {% include '@Widget/Origin/Admin/base.html.twig' with {'origin': origin, "showing_route": path("app_admin_origin_showing_show_origin", {"id": origin.id}), "manage_route": path("app_admin_origin_edition_edit_origin", {"id": origin.id})} %}
+                {% include '@Widget/Origin/Admin/base.html.twig' with
+                    {
+                        'origin': origin,
+                        'showing_route': path("app_admin_origin_showing_show_origin", {"id": origin.id}),
+                        'manage_route': path("app_admin_origin_edition_edit_origin", {"id": origin.id}),
+                        'duplicate_route': path("app_admin_origin_edition_edit_origin", {"id": origin.id})
+                    }
+                %}
             </div>
         {% endfor %}
     </div>

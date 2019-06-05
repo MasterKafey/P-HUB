@@ -1,0 +1,5 @@
+app_admin_item_model_duplication_duplicate_item_model:
+  path: /duplicate_item_model/{id}
+  defaults: { _controller: 'AppBundle:Admin/ItemModel/Duplication:duplicateItemModel' }
+  requirements:
+    id: \d+

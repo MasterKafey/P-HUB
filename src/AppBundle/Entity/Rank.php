@@ -51,4 +51,9 @@ class Rank
     {
         return $this->name;
     }
+
+    public function __clone()
+    {
+        $this->id = null;
+    }
 }

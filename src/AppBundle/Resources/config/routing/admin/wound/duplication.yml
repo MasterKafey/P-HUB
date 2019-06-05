@@ -1,0 +1,5 @@
+app_admin_wound_duplication_duplicate_wound:
+  path: /duplicate_wound/{id}
+  defaults: { _controller: 'AppBundle:Admin/Wound/Duplication:duplicateWound' }
+  requirements:
+    id: \d+

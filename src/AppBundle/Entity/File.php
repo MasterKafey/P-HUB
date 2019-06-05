@@ -148,4 +148,9 @@ class File
     {
         return $this->lastUpdate;
     }
+
+    public function __clone()
+    {
+        $this->id = null;
+    }
 }

@@ -1,0 +1,5 @@
+app_admin_weapon_model_duplication_duplicate_weapon_model:
+  path: /duplicate_weapon_model/{id}
+  defaults: { _controller: 'AppBundle:Admin/WeaponModel/Duplication:duplicateWeaponModel' }
+  requirements:
+    id: \d+

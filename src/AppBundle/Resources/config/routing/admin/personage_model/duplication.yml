@@ -1,0 +1,5 @@
+app_admin_personage_model_duplication_duplicate_personage_model:
+  path: /duplicate_personage_model/{id}
+  defaults: { _controller: 'AppBundle:Admin/PersonageModel/Duplication:duplicatePersonageModel' }
+  requirements:
+    id: \d+
