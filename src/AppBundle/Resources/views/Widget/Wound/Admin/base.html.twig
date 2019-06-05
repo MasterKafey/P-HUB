@@ -1,0 +1,39 @@
+<article class="widget">
+    <header class="widget__header">
+        <div class="widget__title">
+
+        </div>
+        <div class="widget__config">
+            {% block configuration_button %}
+                <a href="{{ showing_route is defined ? showing_route : '#' }}">
+                    <i class="fas fa-eye"></i>
+                </a>
+                <a href="{{ manage_route is defined ? manage_route : '#' }}">
+                    <i class="fas fa-wrench"></i>
+                </a>
+            {% endblock configuration_button %}
+        </div>
+    </header>
+
+    <div class="widget__content">
+        <div class="clearfix"></div>
+        <div class="members__container">
+            <div class="media message checked">
+                <div class="media-body">
+                    <h4 class="media-heading message__heading">{{ wound.name }}</h4>
+                    <input type="checkbox" class="btn-more-check" id="more2" checked>
+                    <div class="message__details">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>Description</td>
+                                <td>{{ wound.description }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
