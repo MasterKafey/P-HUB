@@ -6,3 +6,6 @@ personage: Personnage
 weapons: Armes
 implant: Implant
 item: Item
+origin: Origine
+wound: Blessure
+status: Statut

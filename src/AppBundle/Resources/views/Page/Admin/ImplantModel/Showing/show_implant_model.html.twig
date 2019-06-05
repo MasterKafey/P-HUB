@@ -1,5 +1,7 @@
 {% extends '@Layout/Page/Admin/base.html.twig' %}
 
 {% block body %}
-    {{ dump(implant) }}
+    <div class="col-md-12">
+        {% include '@Widget/Implant/Admin/base.html.twig' with {'implant': implant_model} %}
+    </div>
 {% endblock body %}

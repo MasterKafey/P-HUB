@@ -6,7 +6,7 @@
             <div class="row">
         {% endif %}
         <div class="col-md-6">
-            {% include '@Widget/Implant/Admin/base.html.twig' with {'implant': implant} %}
+            {% include '@Widget/Implant/Admin/base.html.twig' with {'implant': implant, "showing_route": path("app_admin_implant_model_showing_show_implant_model", {"id": implant.id}), "manage_route": path("app_admin_implant_model_edition_edit_implant_model", {"id": implant.id})} %}
         </div>
         {% if loop.index0 % 2 != 0 or (loop.last and loop.index0 % 2 == 0)%}
             </div>
