@@ -5,6 +5,7 @@
 {% endblock stylesheets_html %}
 
 {% block body_html %}
+    <body>
     {% include '@Widget/TopBar/Admin/base.html.twig' with {'tabulations': tabulation_business.routeNavBarTabulations(app.request.attributes.get('_route'))} %}
     <div class="wrapper">
         {% include '@Widget/Sidebar/Admin/base.html.twig' with {'tabulations': tabulation_business.tabulations('admin/sidebar.yml')} %}
@@ -23,4 +24,5 @@
     {% block javascripts_html %}
         {% include '@Layout/Page/Admin/javascripts.html.twig' %}
     {% endblock javascripts_html %}
+    </body>
 {% endblock body_html %}
