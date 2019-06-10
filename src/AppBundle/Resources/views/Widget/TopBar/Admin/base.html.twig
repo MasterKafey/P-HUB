@@ -25,12 +25,14 @@
     <div class="main-brand" style="width: calc(100% - 260px);">
         <div class="main-brand__container">
             {% for tabulation in tabulations %}
-                <a class="main-nav__link" href="{{ path(tabulation.route) }}">
+                <div class="main-logo">
+                    <a class="main-nav__link" href="{{ tabulation.url }}">
                     <span class="main-nav__icon">
                         <i class="{{ tabulation.icon }}"></i>
                     </span>
-                    {{ tabulation.text|trans({}, 'sidebar') }}
-                </a>
+                        {{ tabulation.text|trans({}, 'sidebar') }}
+                    </a>
+                </div>
             {% endfor %}
         </div>
     </div>

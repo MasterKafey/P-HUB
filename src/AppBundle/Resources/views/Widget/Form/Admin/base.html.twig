@@ -1,3 +1,46 @@
+{%  import _self as macro %}
+
+{% macro form_model(form_child, index) %}
+    {%  import _self as macro %}
+    {% for sub_form_child in form_child if 'hidden' not in sub_form_child.vars.block_prefixes %}
+        {{ macro.form_model(sub_form_child, index) }}
+    {% else %}
+        <div class="row">
+        {% if 'checkbox' in form_child.vars.block_prefixes %}
+            <label class="stacked-label">
+                {{ form_widget(form_child) }}
+                <label for="{{ form_child.vars.id }}"></label>
+            </label>
+            <input type="text" class="stacked-input" readonly value="{{ form_child.vars.label }}">
+        {% elseif ('create_file' in form_child.vars.block_prefixes) %}
+            <label class="full-label">
+                {{ form_widget(form_child) }}
+                <i class="{{ form_child.vars.attr.icon|default('fas fa-align-left') }}"></i>
+                <span class="label">{{ form_child.vars.label|default('Fichier') }}</span>
+            </label>
+        {% elseif 'edit_file' in form_child.vars.block_prefixes %}
+            <label class="full-label">
+                <i class="{{ form_child.vars.attr.icon|default('fas fa-align-left') }}"></i>
+                <span class="label">{{ form_child.vars.label|default('Fichier') }}</span>
+                {{ form_widget(form_child.file.file) }}
+            </label>
+            </div>
+            <div class="row">
+            <label class="stacked-label">
+                {{ form_widget(form_child.delete_file, {'attr': {'class': 'custom-checkbox'}}) }}
+                <label for="{{ form_child.delete_file.vars.id }}"></label>
+            </label>
+            <input type="text" class="stacked-input" readonly value="Supprimer image">
+        {% else %}
+            <label for="input-{{ index }}" class="stacked-label">
+                <i class="{{ form_child.vars.attr.icon|default('fas fa-align-left') }}"></i>
+            </label>
+            {{ form_widget(form_child, {'attr': {'class': 'stacked-input'}}) }}
+        {% endif %}
+        </div>
+    {% endfor %}
+{% endmacro %}
+
 <article class="widget widget__form">
     <div class="row">
         <header class="widget__header">
@@ -14,39 +57,7 @@
     <div class="widget__content">
         {{ form_start(form) }}
         {% for form_child in form if 'hidden' not in form_child.vars.block_prefixes %}
-            <div class="row">
-                {% if 'checkbox' in form_child.vars.block_prefixes %}
-                    <label class="stacked-label">
-                        {{ form_widget(form_child) }}
-                        <label for="{{ form_child.vars.id }}"></label>
-                    </label>
-                    <input type="text" class="stacked-input" readonly value="{{ form_child.vars.label }}">
-                {% elseif ('create_file' in form_child.vars.block_prefixes) %}
-                    <label class="full-label">
-                        {{ form_widget(form_child) }}
-                        <i class="{{ form_child.vars.attr.icon|default('fas fa-align-left') }}"></i>
-                        <span class="label">{{ form_child.vars.label|default('Fichier') }}</span>
-                    </label>
-                {% elseif 'edit_file' in form_child.vars.block_prefixes %}
-                    <label class="full-label">
-                        <i class="{{ form_child.vars.attr.icon|default('fas fa-align-left') }}"></i>
-                        <span class="label">{{ form_child.vars.label|default('Fichier') }}</span>
-                        {{ form_widget(form_child.file.file) }}
-                    </label>
-                    </div>
-                    <div class="row">
-                    <label class="stacked-label">
-                        {{ form_widget(form_child.delete_file, {'attr': {'class': 'custom-checkbox'}}) }}
-                        <label for="{{ form_child.delete_file.vars.id }}"></label>
-                    </label>
-                    <input type="text" class="stacked-input" readonly value="Supprimer image">
-                {% else %}
-                    <label for="input-{{ loop.index }}" class="stacked-label">
-                        <i class="{{ form_child.vars.attr.icon|default('fas fa-align-left') }}"></i>
-                    </label>
-                    {{ form_widget(form_child, {'attr': {'class': 'stacked-input'}}) }}
-                {% endif %}
-            </div>
+            {{ macro.form_model(form_child, loop.index) }}
         {% endfor %}
         <div class="row">
             <button>{{ submit_text|default('Valider') }}</button>

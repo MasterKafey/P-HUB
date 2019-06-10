@@ -1,0 +1,8 @@
+app_admin_inventory_model_listing_list_inventory_model:
+    path: /list_inventory_model/
+    defaults: { _controller: 'AppBundle:Admin/InventoryModel/Listing:listInventoryModel' }
+    options:
+        navbar:
+            - text: Ajouter un inventaire
+              icon: fas fa-plus-circle
+              route: app_admin_inventory_model_creation_create_inventory_model

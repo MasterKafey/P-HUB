@@ -1,0 +1,5 @@
+app_admin_inventory_model_deletion_delete_inventory_model:
+    path: /delete_inventory_model/{id}
+    defaults: { _controller: 'AppBundle:Admin/InventoryModel/Deletion:deleteInventoryModel' }
+    requirements:
+        id: \d+

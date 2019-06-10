@@ -5,9 +5,9 @@
 {% endblock stylesheets_html %}
 
 {% block body_html %}
-    {% include '@Widget/TopBar/Admin/base.html.twig' with {'tabulations': tabulation_business.routeNavBarTabulations(app.request.attributes.get('_route'))} %}
+    {% include '@Widget/TopBar/Admin/base.html.twig' with {'tabulations': tabulation_business.routeNavBarTabulations()} %}
     <div class="wrapper">
-        {% include '@Widget/Sidebar/Admin/base.html.twig' with {'tabulations': tabulation_business.tabulations('admin/sidebar.yml')} %}
+        {% include '@Widget/Sidebar/Admin/base.html.twig' with {'tabulations': tabulation_business.tabulations('admin/sidebar')} %}
         <section class="content">
             {% block body %}
 

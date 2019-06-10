@@ -8,4 +8,17 @@ AppBundle\Entity\InventoryModel:
             id: true
             generator:
                 strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 255
+    manyToMany:
+        items:
+            targetEntity: AppBundle\Entity\InventoryItemModel
+            cascade: [persist]
+    oneToOne:
+        settings:
+            targetEntity: AppBundle\Entity\InventorySettingsModel
+            cascade: [persist, remove]
+            nullable: false
     lifecycleCallbacks: {  }

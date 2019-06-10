@@ -13,6 +13,11 @@ class InventoryModel
     private $id;
 
     /**
+     * @var string
+     */
+    private $name;
+
+    /**
      * @var ItemModel[]
      */
     private $items;
@@ -23,6 +28,11 @@ class InventoryModel
     private $personageMode;
 
     /**
+     * @var InventorySettingsModel
+     */
+    private $settings;
+
+    /**
      * Get id.
      *
      * @return int
@@ -30,6 +40,29 @@ class InventoryModel
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Get name.
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set name.
+     *
+     * @param string $name
+     * @return InventoryModel
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
     }
 
     /**
@@ -103,5 +136,28 @@ class InventoryModel
     public function getPersonageMode()
     {
         return $this->personageMode;
+    }
+
+    /**
+     * Get settings.
+     *
+     * @return InventorySettingsModel
+     */
+    public function getSettings()
+    {
+        return $this->settings;
+    }
+
+    /**
+     * Set settings.
+     *
+     * @param $settings
+     * @return $this
+     */
+    public function setSettings($settings)
+    {
+        $this->settings = $settings;
+
+        return $this;
     }
 }

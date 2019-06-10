@@ -1,0 +1,15 @@
+{% extends '@Layout/Page/Admin/base.html.twig' %}
+
+{% block body %}
+    {% for inventory in inventory_models %}
+        {% if loop.index0 % 2 == 0 %}
+            <div class="row">
+        {% endif %}
+        <div class="col-md-6">
+            {% include '@Widget/Inventory/Admin/base.html.twig' with {'inventory': inventory} %}
+        </div>
+        {% if loop.index0 % 2 != 0 or (loop.last and loop.index0 % 2 == 0)%}
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock body %}

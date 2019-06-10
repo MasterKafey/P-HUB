@@ -19,3 +19,6 @@
 -   text: item
     route: app_admin_item_model_listing_list_item_model
     icon: fas fa-cubes
+-   text: inventory
+    route: app_admin_inventory_model_listing_list_inventory_model
+    icon: fas fa-briefcase

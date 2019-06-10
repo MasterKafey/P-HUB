@@ -1,0 +1,22 @@
+app_admin_inventory_model_showing_show_inventory_model:
+    path: /show_inventory_model/{id}
+    defaults: { _controller: 'AppBundle:Admin/InventoryModel/Showing:showInventoryModel' }
+    requirements:
+        id: \d+
+    options:
+        navbar:
+        -   icon: fas fa-cubes
+            text: Ajouter un item
+            route: app_admin_inventory_model_edition_edit_inventory_model
+        -   icon: fas fa-bolt
+            text: Ajouter un implant
+            route: app_admin_inventory_model_edition_edit_inventory_model
+        -   icon: fas fa-plus-circle
+            text: Ajouter un arme
+            route: app_admin_inventory_model_edition_edit_inventory_model
+        -   icon: fas fa-wrench
+            text: Editer l'inventaire
+            route: app_admin_inventory_model_edition_edit_inventory_model
+        -   icon: fas fa-times-circle
+            text: Supprimer l'inventaire
+            route: app_admin_inventory_model_deletion_delete_inventory_model

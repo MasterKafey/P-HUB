@@ -46,3 +46,7 @@ app_admin_home:
     prefix: /
     resource: "home/all.yml"
 
+app_admin_inventory_model:
+    prefix: /inventory_model/
+    resource: "inventory_model/all.yml"
+

@@ -1,0 +1,9 @@
+{% extends '@Layout/Page/Admin/base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            {% include '@Widget/Form/Admin/base.html.twig' with {'title': 'Création d\'inventaire', 'form': form} %}
+        </div>
+    </div>
+{% endblock body %}

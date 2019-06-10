@@ -1,0 +1,3 @@
+app_admin_inventory_model_creation_create_inventory_model:
+    path: /create_inventory_model/
+    defaults: { _controller: 'AppBundle:Admin/InventoryModel/Creation:createInventoryModel' }

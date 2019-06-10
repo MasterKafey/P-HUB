@@ -1,0 +1,5 @@
+app_admin_inventory_model_edition_edit_inventory_model:
+    path: /edit_inventory_model/{id}
+    defaults: { _controller: 'AppBundle:Admin/InventoryModel/Edition:editInventoryModel' }
+    requirements:
+        id: \d+

@@ -1,0 +1,55 @@
+<article class="widget">
+    <header class="widget__header">
+        <div class="widget__title">
+
+        </div>
+        <div class="widget__config">
+            {% block configuration_button %}
+                <a href="{{ path('app_admin_inventory_model_showing_show_inventory_model', {'id': inventory.id}) }}">
+                    <i class="fas fa-eye"></i>
+                </a>
+                <a href="{{ path('app_admin_inventory_model_edition_edit_inventory_model', {'id': inventory.id}) }}">
+                    <i class="fas fa-wrench"></i>
+                </a>
+            {% endblock configuration_button %}
+        </div>
+    </header>
+
+    <div class="widget__content">
+        <div class="clearfix"></div>
+        <div class="members__container">
+            <div class="media message checked">
+                <div class="media-body">
+                    <h4 class="media-heading message__heading">{{ inventory.name }}</h4>
+                    <input type="checkbox" class="btn-more-check" id="more2" checked>
+                    <div class="message__details">
+                        <table>
+                            <tbody>
+                            <tr>
+                                <td>Items</td>
+                                <td>{{ inventory.items|length }}</td>
+                            </tr>
+                            <tr>
+                                <td>Taille</td>
+                                <td>{{ inventory.settings.size ?? 'Aucune limite' }}</td>
+                            </tr>
+                            <tr>
+                                <td>Nombre d'implant</td>
+                                <td>{{ inventory.settings.implantNumber ?? 'Aucune limite' }}</td>
+                            </tr>
+                            <tr>
+                                <td>Nombre d'arme</td>
+                                <td>{{ inventory.settings.weaponNumber ?? 'Aucune limite' }}</td>
+                            </tr>
+                            <tr>
+                                <td>Nombre d'item</td>
+                                <td>{{ inventory.settings.itemNumber ?? 'Aucune limite' }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
