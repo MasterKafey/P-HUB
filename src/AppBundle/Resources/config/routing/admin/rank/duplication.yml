@@ -1,0 +1,5 @@
+app_admin_rank_duplication_duplicate_rank:
+  path: /duplicate_rank/{id}
+  defaults: { _controller: 'AppBundle:Admin/Rank/Duplication:duplicateRank' }
+  requirements:
+    id: \d+

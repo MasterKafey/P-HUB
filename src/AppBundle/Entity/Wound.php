@@ -80,4 +80,9 @@ class Wound
     {
         return $this->description;
     }
+
+    public function __clone()
+    {
+        $this->id = null;
+    }
 }

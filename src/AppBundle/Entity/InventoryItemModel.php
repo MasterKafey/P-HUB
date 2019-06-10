@@ -107,4 +107,9 @@ abstract class InventoryItemModel
     {
         return $this->image;
     }
+
+    public function __clone()
+    {
+        $this->id = null;
+    }
 }

@@ -13,6 +13,9 @@
 -   text: personage
     route: app_admin_personage_model_listing_list_personage_model
     icon: fas fa-users
+-   text: weapons
+    route: app_admin_weapon_model_listing_list_weapon_model
+    icon: fas fa-screwdriver
 -   text: implant
     route: app_admin_implant_model_listing_list_implant_model
     icon: fas fa-bolt
@@ -22,3 +25,15 @@
 -   text: inventory
     route: app_admin_inventory_model_listing_list_inventory_model
     icon: fas fa-briefcase
+-   text: origin
+    route: app_admin_origin_listing_list_origin
+    icon: fas fa-passport
+-   text: wound
+    route: app_admin_wound_listing_list_wound
+    icon: fas fa-user-injured
+-   text: status
+    route: app_admin_status_listing_list_status
+    icon: fas fa-info
+-   text: posture
+    route: app_admin_posture_listing_list_posture
+    icon: fas fa-user-shield

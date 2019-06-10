@@ -1,0 +1,5 @@
+app_admin_posture_duplication_duplicate_posture:
+  path: /duplicate_posture/{id}
+  defaults: { _controller: 'AppBundle:Admin/Posture/Duplication:duplicatePosture' }
+  requirements:
+    id: \d+

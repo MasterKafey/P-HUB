@@ -1,0 +1,5 @@
+app_admin_god_duplication_duplicate_god:
+  path: /duplicate_god/{id}
+  defaults: { _controller: 'AppBundle:Admin/God/Duplication:duplicateGod' }
+  requirements:
+    id: \d+

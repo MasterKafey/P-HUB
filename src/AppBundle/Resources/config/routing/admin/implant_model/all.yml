@@ -18,3 +18,7 @@ app_admin_implant_model_showing:
     prefix: /showing/
     resource: "showing.yml"
 
+app_admin_implant_model_duplication:
+    prefix: /duplication/
+    resource: "duplication.yml"
+

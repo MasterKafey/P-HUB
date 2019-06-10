@@ -11,13 +11,13 @@ class CreationController extends Controller
 {
     public function createWeaponModelAction(Request $request)
     {
-        $weapon = new WeaponModel();
-        $form = $this->createForm(CreateWeaponModelType::class, $weapon);
+        $weaponModel = new WeaponModel();
+        $form = $this->createForm(CreateWeaponModelType::class, $weaponModel);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $em->persist($weapon);
+            $em->persist($weaponModel);
             $em->flush();
             return $this->redirectToRoute('app_admin_weapon_model_listing_list_weapon_model');
         }

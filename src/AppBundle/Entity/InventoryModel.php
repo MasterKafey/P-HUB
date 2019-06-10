@@ -25,7 +25,7 @@ class InventoryModel
     /**
      * @var PersonageModel
      */
-    private $personageMode;
+    private $personageModel;
 
     /**
      * @var InventorySettingsModel
@@ -117,13 +117,13 @@ class InventoryModel
     /**
      * Set personageModel.
      *
-     * @param PersonageModel $personageMode
+     * @param PersonageModel $personageModel
      *
      * @return InventoryModel
      */
-    public function setPersonageMode($personageMode)
+    public function setPersonageModel($personageModel)
     {
-        $this->personageMode = $personageMode;
+        $this->personageModel = $personageModel;
 
         return $this;
     }
@@ -133,9 +133,14 @@ class InventoryModel
      *
      * @return PersonageModel
      */
-    public function getPersonageMode()
+    public function getPersonageModel()
     {
-        return $this->personageMode;
+        return $this->personageModel;
+    }
+
+    public function __clone()
+    {
+        $this->id = null;
     }
 
     /**

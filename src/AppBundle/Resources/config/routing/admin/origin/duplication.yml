@@ -1,0 +1,5 @@
+app_admin_origin_duplication_duplicate_origin:
+  path: /duplicate_origin/{id}
+  defaults: { _controller: 'AppBundle:Admin/Origin/Duplication:duplicateOrigin' }
+  requirements:
+    id: \d+

@@ -1,3 +1,8 @@
 app_admin_rank_listing_list_rank:
     path: /list_rank/
     defaults: { _controller: 'AppBundle:Admin/Rank/Listing:listRank' }
+    options:
+        navbar:
+        - icon: fa fa-plus
+          text: Ajouter un rang
+          route: app_admin_rank_creation_create_rank

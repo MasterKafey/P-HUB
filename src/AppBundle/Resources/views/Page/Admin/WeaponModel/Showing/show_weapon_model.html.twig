@@ -1,5 +1,7 @@
 {% extends '@Layout/Page/Admin/base.html.twig' %}
 
 {% block body %}
-    {{ dump(weapon) }}
+    <div class="col-md-12">
+        {% include '@Widget/Weapon/Admin/base.html.twig' with {'personage': personage_model} %}
+    </div>
 {% endblock body %}

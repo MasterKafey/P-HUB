@@ -18,3 +18,7 @@ app_admin_origin_showing:
     prefix: /showing/
     resource: "showing.yml"
 
+app_admin_origin_duplication:
+    prefix: /duplication/
+    resource: "duplication.yml"
+

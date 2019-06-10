@@ -1,0 +1,5 @@
+app_admin_status_duplication_duplicate_status:
+  path: /duplicate_status/{id}
+  defaults: { _controller: 'AppBundle:Admin/Status/Duplication:duplicateStatus' }
+  requirements:
+    id: \d+

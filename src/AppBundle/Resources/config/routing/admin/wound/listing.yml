@@ -1,3 +1,8 @@
 app_admin_wound_listing_list_wound:
     path: /list_wound/
     defaults: { _controller: 'AppBundle:Admin/Wound/Listing:listWound' }
+    options:
+        navbar:
+        - icon: fa fa-plus
+          text: Ajouter une blessure
+          route: app_admin_wound_creation_create_wound

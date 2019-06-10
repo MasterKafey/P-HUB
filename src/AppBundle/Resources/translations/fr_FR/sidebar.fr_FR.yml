@@ -3,6 +3,11 @@ player: Joueur
 god: Dieu
 rank: Rang
 personage: Personnage
+weapons: Armes
 implant: Implant
 item: Item
 inventory: Inventaire
+origin: Origine
+wound: Blessure
+status: Statut
+posture: Posture

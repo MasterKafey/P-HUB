@@ -4,7 +4,14 @@
     <div class="row">
         {% for god in gods %}
             <div class="col-md-6">
-                {% include '@Widget/God/Admin/base.html.twig' with {'god': god} %}
+                {% include '@Widget/God/Admin/base.html.twig' with
+                    {
+                        'god': god,
+                        'showing_route': path("app_admin_god_showing_show_god", {"id": god.id}),
+                        'manage_route': path("app_admin_god_edition_edit_god", {"id": god.id}),
+                        'duplicate_route': path("app_admin_god_duplication_duplicate_god", {"id": god.id})
+                    }
+                %}
             </div>
         {% endfor %}
     </div>

@@ -1,3 +1,8 @@
 app_admin_posture_listing_list_posture:
     path: /list_posture/
     defaults: { _controller: 'AppBundle:Admin/Posture/Listing:listPosture' }
+    options:
+        navbar:
+            - text: Ajouter une posture
+              route: app_admin_posture_creation_create_posture
+              icon: fas fa-plus

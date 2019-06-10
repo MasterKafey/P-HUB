@@ -4,7 +4,14 @@
     <div class="row">
         {% for personage_model in personage_models %}
             <div class="col-md-6">
-                {% include '@Widget/Personage/Admin/base.html.twig' with {'personage': personage_model, "showing_route": path("app_admin_personage_model_showing_show_personage_model", {"id": personage_model.id}), "manage_route": path("app_admin_personage_model_edition_edit_personage_model", {"id": personage_model.id})} %}
+                {% include '@Widget/Personage/Admin/base.html.twig' with
+                    {
+                        'personage': personage_model,
+                        'showing_route': path("app_admin_personage_model_showing_show_personage_model", {"id": personage_model.id}),
+                        'manage_route': path("app_admin_personage_model_edition_edit_personage_model", {"id": personage_model.id}),
+                        'duplicate_route': path("app_admin_personage_model_duplication_duplicate_personage_model", {"id": personage_model.id})
+                    }
+                %}
             </div>
         {% endfor %}
     </div>

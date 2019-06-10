@@ -1,0 +1,5 @@
+app_admin_implant_model_duplication_duplicate_implant_model:
+  path: /duplicate_implant_model/{id}
+  defaults: { _controller: 'AppBundle:Admin/ImplantModel/Duplication:duplicateImplantModel' }
+  requirements:
+    id: \d+

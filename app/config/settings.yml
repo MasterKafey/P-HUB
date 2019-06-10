@@ -4,3 +4,4 @@ parameters:
         sender_name: 'PHUB'
     vich_uploader.directory_upload.path: /uploads
     vich_uploader.directory_upload.protected_path: '%kernel.project_dir%/uploads/protected_file/'
+    cloned_word: "Duplicata "

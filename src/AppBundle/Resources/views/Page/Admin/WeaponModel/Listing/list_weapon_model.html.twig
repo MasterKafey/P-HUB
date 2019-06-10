@@ -1,5 +1,18 @@
 {% extends '@Layout/Page/Admin/base.html.twig' %}
 
 {% block body %}
-    {{ dump(weapons) }}
+    <div class="row">
+        {% for weapon_model in weapon_models %}
+            <div class="col-md-6">
+                {% include '@Widget/Weapon/Admin/base.html.twig' with
+                    {
+                        'weapon_model': weapon_model,
+                        'showing_route': path("app_admin_weapon_model_showing_show_weapon_model", {"id": weapon_model.id}),
+                        'manage_route': path("app_admin_weapon_model_edition_edit_weapon_model", {"id": weapon_model.id}),
+                        'duplicate_route': path("app_admin_weapon_model_duplication_duplicate_weapon_model", {"id": weapon_model.id})
+                    }
+                %}
+            </div>
+        {% endfor %}
+    </div>
 {% endblock body %}

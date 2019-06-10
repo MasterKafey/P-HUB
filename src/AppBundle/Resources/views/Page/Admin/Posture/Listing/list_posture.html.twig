@@ -1,5 +1,18 @@
 {% extends '@Layout/Page/Admin/base.html.twig' %}
 
 {% block body %}
-    {{ dump(postures) }}
+    <div class="row">
+        {% for posture in postures %}
+            <div class="col-md-6">
+                {% include '@Widget/Posture/Admin/base.html.twig' with
+                    {
+                        'posture': posture,
+                        'showing_route': path("app_admin_posture_showing_show_posture", {"id": posture.id}),
+                        'manage_route': path("app_admin_posture_edition_edit_posture", {"id": posture.id}),
+                        'duplicate_route': path("app_admin_posture_duplication_duplicate_posture", {"id": posture.id})
+                    }
+                %}
+            </div>
+        {% endfor %}
+    </div>
 {% endblock body %}

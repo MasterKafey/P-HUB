@@ -1,5 +1,18 @@
 {% extends '@Layout/Page/Admin/base.html.twig' %}
 
 {% block body %}
-    {{ dump(ranks) }}
+    <div class="row">
+        {% for rank in ranks %}
+            <div class="col-md-4">
+                {% include '@Widget/Rank/Admin/base.html.twig' with
+                    {
+                        'rank': rank,
+                        'showing_route': path("app_admin_rank_showing_show_rank", {"id": rank.id}),
+                        'manage_route': path("app_admin_rank_edition_edit_rank", {"id": rank.id}),
+                        'duplicate_route': path("app_admin_rank_duplication_duplicate_rank", {"id": rank.id})
+                    }
+                %}
+            </div>
+        {% endfor %}
+    </div>
 {% endblock body %}

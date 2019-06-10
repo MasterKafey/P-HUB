@@ -13,7 +13,12 @@ class EditRankType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name', TextType::class)
+            ->add('name', TextType::class, array(
+                'attr' => array(
+                    'placeholder' => 'Nom',
+                    'icon' => 'fas fa-id-card'
+                )
+            ))
         ;
     }
 
