@@ -1,39 +1,39 @@
 -   text: main_menu
     route: app_admin_home_index
-    icon: fas fa-tachometer-alt
+    icon: ra ra-spades-card
 -   text: player
     route: app_admin_player_listing_list_player
-    icon: fas fa-user-secret
+    icon: ra ra-player
 -   text: rank
     route: app_admin_rank_listing_list_rank
-    icon: fas fa-id-badge
+    icon: ra ra-crown
 -   text: god
     route: app_admin_god_listing_list_god
-    icon: fab fa-superpowers
+    icon: ra ra-alien-fire ra-lg
 -   text: personage
     route: app_admin_personage_model_listing_list_personage_model
-    icon: fas fa-users
+    icon: ra ra-muscle-up
 -   text: weapons
     route: app_admin_weapon_model_listing_list_weapon_model
-    icon: fas fa-screwdriver
+    icon: ra ra-axe
 -   text: implant
     route: app_admin_implant_model_listing_list_implant_model
-    icon: fas fa-bolt
+    icon: ra ra-regeneration
 -   text: item
     route: app_admin_item_model_listing_list_item_model
-    icon: fas fa-cubes
+    icon: ra ra-key
 -   text: inventory
     route: app_admin_inventory_model_listing_list_inventory_model
-    icon: fas fa-briefcase
+    icon: ra ra-ammo-bag
 -   text: origin
     route: app_admin_origin_listing_list_origin
     icon: fas fa-passport
 -   text: wound
     route: app_admin_wound_listing_list_wound
-    icon: fas fa-user-injured
+    icon: ra ra-player-pain
 -   text: status
     route: app_admin_status_listing_list_status
     icon: fas fa-info
 -   text: posture
     route: app_admin_posture_listing_list_posture
-    icon: fas fa-user-shield
+    icon: ra ra-player-teleport
